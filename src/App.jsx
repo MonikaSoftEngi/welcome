@@ -132,25 +132,34 @@
 
 
 
-import 
-  NetflixSeries, { Footer ,Header }
+// import 
+//   NetflixSeries, { Footer ,Header }
 
-from "./components/NetflixSeries";
+// from "./components/NetflixSeries";
+// export const App = () =>{
+//   return (
+//     <>
+//       <Header/>
+//       <NetflixSeries/>
+//       <NetflixSeries/>
+//       <NetflixSeries/>
+//       <NetflixSeries/>
+//       <NetflixSeries/>
+//       <Footer/>
+//     </>
+//   );
+// };
+
+import  NetflixSeries from "./components/NetflixSeries";
 export const App = () =>{
   return (
     <>
-      <Header/>
+      
       <NetflixSeries/>
-      <NetflixSeries/>
-      <NetflixSeries/>
-      <NetflixSeries/>
-      <NetflixSeries/>
-      <Footer/>
+      
     </>
-  )
-}
-
-
+  );
+};
 
 
 
