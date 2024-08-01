@@ -132,20 +132,21 @@
 
 
 
-import {
-  NetflixSeries, Footer 
-}
+import 
+  NetflixSeries, { Footer ,Header }
+
 from "./components/NetflixSeries";
 export const App = () =>{
   return (
-    <div>
+    <>
+      <Header/>
       <NetflixSeries/>
       <NetflixSeries/>
       <NetflixSeries/>
       <NetflixSeries/>
       <NetflixSeries/>
       <Footer/>
-    </div>
+    </>
   )
 }
 
