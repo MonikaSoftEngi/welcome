@@ -132,38 +132,50 @@
   
 
 
+// import SeriesData from "../api/seriesData.json";
+// const NetflixSeries = () {
+//   return (
+    // <ul>
+    // {SeriesData.map((CurElem) => {
+    //  return (
+    //     <li key={curElem.id}>
+    //     <div>
+    //     <img
+    //     src= {curElem.img_url}
+    //       alt={curElem.name}
+    //       width ="40%"
+    //       hight = "40%"
+    //       />
+    
+    //     </div>
+    //     <h2>Name: {curElem.name} </h2>
+    //     <h3>Rating: {curElem.Rating} </h3>
+    //     <p>summary: {curElem.summary}   </p>
+    //     <p>Genre: {curElem.Genre}  </p>
+    //     <p>Cast: {curElem.Cast}  </p>
+    //     <a href= {curElem.Watch_url} target="_blank">
+    //       <button>Watch Now</button>
+    //       </a>
+    //     </li>
+    //   );
+    // })};
+    // </ul>
+//   );
+// };
+
+
+
 import SeriesData from "../api/seriesData.json";
-const NetflixSeries = () {
+const NetflixSeries = () = {
   return (
-    <ul>
-    {SeriesData.map((CurElem) => {
-    
-      return (
-        <li key={curElem.id}>
-        <div>
-        <img
-        src= {curElem.img_url}
-          alt={curElem.name}
-          width ="40%"
-          hight = "40%"
-          />
-    
-        </div>
-        <h2>Name: {curElem.name} </h2>
-        <h3>Rating: {curElem.Rating} </h3>
-        <p>summary: {curElem.summary}   </p>
-        <p>Genre: {curElem.Genre}  </p>
-        <p>Cast: {curElem.Cast}  </p>
-        <a href= {curElem.Watch_url} target="_blank">
-          <button>Watch Now</button>
-          </a>
-        </li>
-      );
-    })};
-    </ul>
+  <ul>
+  {SeriesData.map((curElem) => ( 
+  <SeriesCard  key={curElem.id} curElem={curElem} />
+  ))}
+  </ul>
   );
 };
-
+export default NetflixSeries
 
 
 
