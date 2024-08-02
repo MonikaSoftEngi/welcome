@@ -166,7 +166,9 @@
 
 
 import SeriesData from "../api/seriesData.json";
-const NetflixSeries = () = {
+import { SeriesCard } from "./SeriesCard";
+
+const NetflixSeries = () => {
   return (
   <ul>
   {SeriesData.map((curElem) => ( 
