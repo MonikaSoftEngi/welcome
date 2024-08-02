@@ -52,84 +52,117 @@
 
 
 
-import seriesData from "../api/seriesData.json";
+// import seriesData from "../api/seriesData.json";
 
-constNetflixSeries = () => {
-return (
-  <ul>
-    <li>
-    <div>
-      <div>
-        <img src ="{seriesData[0].img_url}" 
-        alt="Queen of Tears" width="40%"hight="40%" />
-      </div>
-      <h2>Name: {seriesData[0].name} </h2>
-      <h3>Rating:{seriesData[0].rating}</h3>
-      <p>Sumamry:{seriesData[0].description}</p>
-      <p>Genre:{seriesData[0].genre}</p>
-       <p>Cast:{seriesData[0].Cast}</p>
+// constNetflixSeries = () => {
+// return (
+//   <ul>
+//     <li>
+//     <div>
+//       <div>
+//         <img src ="{seriesData[0].img_url}" 
+//         alt="Queen of Tears" width="40%"hight="40%" />
+//       </div>
+//       <h2>Name: {seriesData[0].name} </h2>
+//       <h3>Rating:{seriesData[0].rating}</h3>
+//       <p>Sumamry:{seriesData[0].description}</p>
+//       <p>Genre:{seriesData[0].genre}</p>
+//        <p>Cast:{seriesData[0].Cast}</p>
 
-       <a href= {seriesData[0].watch_url}target="_blank">
-      </a>
-    <button>{canWatch()}</button>
-    </div>
-    </li>
-    <li>
-    <div>
-      <div>
-        <img src ="{seriesData[0].img_url}" 
-        alt="Queen of Tears" width="40%"hight="40%" />
-      </div>
-      <h2>Name: {seriesData[1].name} </h2>
-      <h3>Rating:{seriesData[1].rating}</h3>
-      <p>Sumamry:{seriesData[1].description}</p>
-      <p>Genre:{seriesData[1].genre}</p>
-       <p>Cast:{seriesData[1].Cast}</p>
+//        <a href= {seriesData[0].watch_url}target="_blank">
+//       </a>
+//     <button>{canWatch()}</button>
+//     </div>
+//     </li>
+//     <li>
+//     <div>
+//       <div>
+//         <img src ="{seriesData[0].img_url}" 
+//         alt="Queen of Tears" width="40%"hight="40%" />
+//       </div>
+//       <h2>Name: {seriesData[1].name} </h2>
+//       <h3>Rating:{seriesData[1].rating}</h3>
+//       <p>Sumamry:{seriesData[1].description}</p>
+//       <p>Genre:{seriesData[1].genre}</p>
+//        <p>Cast:{seriesData[1].Cast}</p>
 
-       <a href= {seriesData[1].watch_url}target="_blank">
-      </a>
-    <button>{canWatch()}</button>
-    </div>
-    </li>
-    <li>
-    <div>
-      <div>
-        <img src ="{seriesData[0].img_url}" 
-        alt="Queen of Tears" width="40%"hight="40%" />
-      </div>
-      <h2>Name: {seriesData[2].name} </h2>
-      <h3>Rating:{seriesData[2].rating}</h3>
-      <p>Sumamry:{seriesData[2].description}</p>
-      <p>Genre:{seriesData[2].genre}</p>
-       <p>Cast:{seriesData[2].Cast}</p>
+//        <a href= {seriesData[1].watch_url}target="_blank">
+//       </a>
+//     <button>{canWatch()}</button>
+//     </div>
+//     </li>
+//     <li>
+//     <div>
+//       <div>
+//         <img src ="{seriesData[0].img_url}" 
+//         alt="Queen of Tears" width="40%"hight="40%" />
+//       </div>
+//       <h2>Name: {seriesData[2].name} </h2>
+//       <h3>Rating:{seriesData[2].rating}</h3>
+//       <p>Sumamry:{seriesData[2].description}</p>
+//       <p>Genre:{seriesData[2].genre}</p>
+//        <p>Cast:{seriesData[2].Cast}</p>
 
-       <a href= {seriesData[2].watch_url}target="_blank">
-      </a>
-    <button>{canWatch()}</button>
-    </div>
-    </li>
-    <li>
-    <div>
-      <div>
-        <img src ="{seriesData[0].img_url}" 
-        alt="Queen of Tears" width="40%"hight="40%" />
-      </div>
-      <h2>Name: {seriesData[3].name} </h2>
-      <h3>Rating:{seriesData[3].rating}</h3>
-      <p>Sumamry:{seriesData[3].description}</p>
-      <p>Genre:{seriesData[3].genre}</p>
-       <p>Cast:{seriesData[3].Cast}</p>
+//        <a href= {seriesData[2].watch_url}target="_blank">
+//       </a>
+//     <button>{canWatch()}</button>
+//     </div>
+//     </li>
+//     <li>
+//     <div>
+//       <div>
+//         <img src ="{seriesData[0].img_url}" 
+//         alt="Queen of Tears" width="40%"hight="40%" />
+//       </div>
+//       <h2>Name: {seriesData[3].name} </h2>
+//       <h3>Rating:{seriesData[3].rating}</h3>
+//       <p>Sumamry:{seriesData[3].description}</p>
+//       <p>Genre:{seriesData[3].genre}</p>
+//        <p>Cast:{seriesData[3].Cast}</p>
 
-       <a href= {seriesData[3].watch_url}target="_blank">
-      </a>
-    <button>{canWatch()}</button>
-    </div>
-    </li>
+//        <a href= {seriesData[3].watch_url}target="_blank">
+//       </a>
+//     <button>{canWatch()}</button>
+//     </div>
+//     </li>
+//     </ul>
+//   );
+//   };
+//   export default NetflixSeries;
+  
+
+
+import SeriesData from "../api/seriesData.json";
+const NetflixSeries = () {
+  return (
+    <ul>
+    {SeriesData.map((CurElem) => {
+    
+      return (
+        <li key={curElem.id}>
+        <div>
+        <img
+        src= {curElem.img_url}
+          alt={curElem.name}
+          width ="40%"
+          hight = "40%"
+          />
+    
+        </div>
+        <h2>Name: {curElem.name} </h2>
+        <h3>Rating: {curElem.Rating} </h3>
+        <p>summary: {curElem.summary}   </p>
+        <p>Genre: {curElem.Genre}  </p>
+        <p>Cast: {curElem.Cast}  </p>
+        <a href= {curElem.Watch_url} target="_blank">
+          <button>Watch Now</button>
+          </a>
+        </li>
+      );
+    })};
     </ul>
   );
-  };
-  export default NetflixSeries;
-  
+};
 
 
 
