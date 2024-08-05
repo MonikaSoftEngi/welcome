@@ -1,3 +1,4 @@
+
 function profile() {
     return (
         <div>
@@ -29,17 +30,20 @@ function profile() {
     </profilecard>
     </div>
     );
+
+
 };
 export default profile;
 
 
-function profilecard(props){
+function profilecard({name, ahe, greeting , children}){
+    // const {name, ahe, greeting , children} = props;
 return(
     <>
-    <h2>Name:{props.name} </h2>
-    <p>Age:{props.age}</p>
-     <p>{props.greeting}</p>
-     <div></div>
+    <h2>Name:{name} </h2>
+    <p>Age:{age}</p>
+     <p>{greeting}</p>
+     <div>{children}</div>
     </>
 );
 };

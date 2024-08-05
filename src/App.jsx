@@ -151,8 +151,14 @@
 // };
 
 import  NetflixSeries from "./components/NetflixSeries";
-export const App = () =>{
-  return <NetflixSeries/>;
+import "./componets/Netflix.css";
+export const App = () => {
+return (
+    <Section className="container">
+      <h1 className="card-heading">List of Best Netflix series</h1>
+    <NetflixSeries/>;
+    </Section>
+  );
   };
 
 
