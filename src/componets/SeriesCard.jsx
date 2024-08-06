@@ -4,8 +4,14 @@ export const SeriesCard = ({data}) => {
     const btn_style ={padding:"1.2rem 2.4rem", 
       border:"none",
       fontsize:"1.6rem",
-      backgroundcolor:"var(--bnt-hover-bg-color)",
-      color:"var(--bg-color)",}
+      backgroundcolor: '${rating > 8.5 ? "#7dcea0" : "#f7dc6f"}',
+      color:"var(--btn-color)",
+      fontweight: "bold",
+      cursor: "pointer",};
+
+const ratingClass = rating > 8.5 ? "super_hit" :"averege";
+
+
   return (
     <li class Name="card">
       <div>
@@ -13,7 +19,11 @@ export const SeriesCard = ({data}) => {
       </div>
       <div className="card-content">
       <h2>Name: {name} </h2>
-      <h3>Rating:{Rating} </h3>
+      <h3>
+        Rating:
+        <span 
+        className={'rating ${ratingClass}'}>{rating}</span> 
+      </h3>
       <p>summary:{description} </p>
       <p>Genre:{Genre.join} </p>
       <p>Cast:{Cast.join} </p>
