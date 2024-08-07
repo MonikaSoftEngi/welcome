@@ -151,7 +151,9 @@
 // };
 
 import  NetflixSeries from "./components/NetflixSeries";
-import "./componets/Netflix.css";
+// import "./componets/Netflix.css";
+import "./componets/Netflix.module.css";
+
 export const App = () => {
 return (
     <Section className="container">
