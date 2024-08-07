@@ -1,16 +1,38 @@
 import styles from "./Netflix.module.css";
+import styled from "styled-componets";
+
 export const SeriesCard = ({data}) => {
   const {  img_url, name, rating, description, cast, genre, watch_url } =
     data;
-    const btn_style ={padding:"1.2rem 2.4rem", 
-      border:"none",
-     fontsize:"1.6rem",
-      backgroundcolor: '${rating > 8.5 ? "#7dcea0" : "#f7dc6f"}',
-      color:"var(--btn-color)",
-      fontweight: "bold",
-      cursor: "pointer",};
-
-const ratingClass = rating > 8.5 ? styles.super_hit :styles.averege;
+    // const btn_style ={
+      // const ButtonThapa = styled.button (
+      //   {
+      //     padding:"1.2rem 2.4rem", 
+      //     border:"none",
+      //    font-size:"1.6rem",
+      //     backgroundcolor: '${rating > 8.5 ? "#7dcea0" : "#f7dc6f"}',
+      //     color:"var(--btn-color)",
+      //     font-weight: "bold",
+      //     cursor: "pointer",
+      //   }
+      // )
+      const ButtonThapa = styled.button `
+      padding:1.2rem 2.4rem
+          border:none;
+         fontsize:1.6rem;
+          background-color: ${(Props) => Props.rating > 8.5 ? "#7dcea0" : "#f7dc6f"};
+          color:var(--btn-color);
+          fontweight: bold ;
+          cursor: pointer;
+      `
+      
+      
+        const Rating =styled.h3`
+        fontsize:1.6rem;
+        color:#7dcea0;
+        text-transfrom:capitalize;
+        `;  
+      const ratingClass = rating > 8.5 ? styles.super_hit :styles.averege;
 
 
   return (
@@ -20,17 +42,18 @@ const ratingClass = rating > 8.5 ? styles.super_hit :styles.averege;
       </div>
       <div className={styles["card-content"]}>
       <h2>Name: {name} </h2>
-      <h3>
+      <rating>
         Rating:
         <span 
         className={'${style.rating }${ratingClass}'}>{rating}</span> 
-      </h3>
+      </rating>
       <p>summary:{description} </p>
       <p>Genre:{Genre.join} </p>
       <p>Cast:{Cast.join} </p>
       <a href={Watch_url} target="_blank">
-      <button style={btn_style} >
-      Watch Now</button>
+      {/* <button style={btn_style} >
+      Watch Now</button> */}
+      <ButtonThapa rating={ratring}>Watch Now</ButtonThapa>
       </a>
       </div>
     </li>
