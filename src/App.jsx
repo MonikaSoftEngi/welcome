@@ -150,15 +150,16 @@
 //   );
 // };
 
-import  NetflixSeries from "./components/NetflixSeries";
+// import  NetflixSeries from "./components/NetflixSeries";
 // import "./componets/Netflix.css";
 import "./componets/Netflix.module.css";
 
 export const App = () => {
 return (
     <Section className="container">
-      <h1 className="card-heading">List of Best Netflix series</h1>
-    <NetflixSeries/>;
+      {/* <h1 className="card-heading">List of Best Netflix series</h1>
+    <NetflixSeries/>; */}
+    <EventHandling/>
     </Section>
   );
   };

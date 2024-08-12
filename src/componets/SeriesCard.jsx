@@ -51,7 +51,7 @@ export const SeriesCard = ({data}) => {
       <p className="text-3xl font-bold underline text-ctan-300">summary: {description} </p>
       <p>Genre:{Genre.join} </p>
       <p>Cast:{Cast.join} </p>
-      <a href={Watch_url} target="_blank">
+       <a href={Watch_url} target="_blank">
       {/* <button style={btn_style} >
       Watch Now</button> */}
       <ButtonThapa rating={ratring}>Watch Now</ButtonThapa>
