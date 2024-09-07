@@ -156,10 +156,13 @@ import "./componets/Netflix.module.css";
 
 export const App = () => {
 return (
+
+
+  
     <Section className="container">
-      {/* <h1 className="card-heading">List of Best Netflix series</h1>
-    <NetflixSeries/>; */}
-    <EventHandling/>
+      <h1 className="card-heading">List of Best Netflix series</h1>
+    <NetflixSeries/>;
+    {/* <EventHandling/> */}
     </Section>
   );
   };

@@ -133,40 +133,41 @@
 
 
 // import SeriesData from "../api/seriesData.json";
-// const NetflixSeries = () {
+// const NetflixSeries = () =>{
 //   return (
-    // <ul>
-    // {SeriesData.map((CurElem) => {
-    //  return (
-    //     <li key={curElem.id}>
-    //     <div>
-    //     <img
-    //     src= {curElem.img_url}
-    //       alt={curElem.name}
-    //       width ="40%"
-    //       hight = "40%"
-    //       />
+//     <ul>
+//     {SeriesData.map((CurElem) => {
+//      return (
+//         <li key={curElem.id}>
+//         <div>
+//         <img
+//         src= {curElem.img_url}
+//           alt={curElem.name}
+//           width ="40%"
+//           hight = "40%"
+//           />
     
-    //     </div>
-    //     <h2>Name: {curElem.name} </h2>
-    //     <h3>Rating: {curElem.Rating} </h3>
-    //     <p>summary: {curElem.summary}   </p>
-    //     <p>Genre: {curElem.Genre}  </p>
-    //     <p>Cast: {curElem.Cast}  </p>
-    //     <a href= {curElem.Watch_url} target="_blank">
-    //       <button>Watch Now</button>
-    //       </a>
-    //     </li>
-    //   );
-    // })};
-    // </ul>
+//         </div>
+//         <h2>Name: {curElem.name} </h2>
+//         <h3>Rating: {curElem.Rating} </h3>
+//         <p>summary: {curElem.summary}   </p>
+//         <p>Genre: {curElem.Genre}  </p>
+//         <p>Cast: {curElem.Cast}  </p>
+//         <a href= {curElem.Watch_url} target="_blank">
+//           <button>Watch Now</button>
+//           </a>
+//         </li>
+//       );
+//     })};
+//     </ul>
 //   );
 // };
 
 
 
-import SeriesData from "../api/seriesData.json";
-import { SeriesCard } from "./SeriesCard";
+import SeriesData from "../src/api/seriesData.json";
+
+import { SeriesCard } from "../src/componets/SeriesCard";
 
 const NetflixSeries = () => {
   return (
