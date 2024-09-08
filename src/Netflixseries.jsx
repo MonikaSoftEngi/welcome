@@ -169,6 +169,7 @@ import SeriesData from "../src/api/seriesData.json";
 
 import { SeriesCard } from "../src/componets/SeriesCard";
 
+
 const NetflixSeries = () => {
   return (
   <ul className = "grid grid-three--cols">
@@ -178,7 +179,7 @@ const NetflixSeries = () => {
   </ul>
   );
 };
-export default NetflixSeries
+export default NetflixSeries;
 
 
 
