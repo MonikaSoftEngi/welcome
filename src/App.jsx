@@ -154,6 +154,7 @@
 // import "./componets/Netflix.css";
 import "./componets/Netflix.module.css";
 // import {EventHandling} from "./components/EventHandling";
+import "./components/Ev.css";
 
 export const App = () => {
 return (

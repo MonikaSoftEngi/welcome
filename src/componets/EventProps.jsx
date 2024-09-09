@@ -6,24 +6,26 @@
    const HandleHover = ()=> {
     alert(`Hey Thanks for hovering me`);
    };
-    return(<>
+    return(
+    <>
     <WelcomeUser 
-    oncilick={()=> HandleWelcomeUser("monika")}
-        onMouseEnter={HandelHover}
+    onClick={() => HandleWelcomeUser("monika")}
+        onMouseEnter={handleHover}
          />
      </>
      );
   };
   const WelcomeUser = (props) => {
-    const handlereeting = () => {
-        console.log(`He User,Welcome`);
-        Props.onClick;
+    const {onClick, onMouseEnter} = props;
+    const handleGreeting = () => {
+        console.log(`Hey User,Welcome`);
+        onClick;
     }
     return (
         <>
-        <button onclick={props.onclick}>click </button>
-        <button onMouseEnter={props.omMouseEnter}>Hover me</button>
-        <button onclick={handelGreeting}> Greeting</button>
+        <button onclick={onClick}>Click </button>
+        <button onMouseEnter={onMouseEnter}>Hover me</button>
+        <button onClick={handleGreeting}>Greeting</button>
         </>
-    )
-  }
+    );
+  };
