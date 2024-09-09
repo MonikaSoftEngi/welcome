@@ -21,9 +21,10 @@
         console.log(`Hey User,Welcome`);
         onClick;
     }
+
     return (
         <>
-        <button onclick={onClick}>Click </button>
+        <button onClick={onClick}>Click </button>
         <button onMouseEnter={onMouseEnter}>Hover me</button>
         <button onClick={handleGreeting}>Greeting</button>
         </>

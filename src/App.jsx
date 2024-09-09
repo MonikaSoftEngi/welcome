@@ -152,21 +152,35 @@
 
 // import  NetflixSeries from "./components/NetflixSeries";
 // import "./componets/Netflix.css";
-import "./componets/Netflix.module.css";
+// import "./componets/Netflix.module.css";
 // import {EventHandling} from "./components/EventHandling";
-import "./components/Ev.css";
+// import "./components/Ev.css";
 
-export const App = () => {
-return (
-    <Section className="container">
-      {/* <h1 className="card-heading">List of Best Netflix series</h1>
-    <NetflixSeries/>; */}
-    <EventHandling/>
-    <Eventprops/>
-    </Section>
-  );
+// export const App = () => {
+// return (
+//     <Section className="container">
+      // {/* <h1 className="card-heading">List of Best Netflix series</h1>
+    // <NetflixSeries/>; */}
+  //   <EventHandling/>
+  //   <Eventprops/>
+  //   </Section>
+  // );
+  // };
+
+
+
+
+
+
+  // ******react state
+
+  import "./componets/Ev.css";
+import {state}from "./componets/hooks/state";
+  export const App = () => {
+    return (
+      <section className="container">
+<state/>
+    </section>
+  
+    );
   };
-
-
-
-
