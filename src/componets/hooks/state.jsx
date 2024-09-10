@@ -1,6 +1,6 @@
 import {usestate} from "react";
 export const state = () => {
-   
+   const[users, setusers]= usestate()
     // };
     // let [count, setcount]=usestate(0);
     // console.log(count);
@@ -15,20 +15,20 @@ export const state = () => {
        <h1>{count}</h1>
         <button onclick={handleButtonClick}>Increment</button>
         </div>
-        <ChildComp count={count}/>
+        <ChildComponent count={count}/>
         </>
     ); // let value  = 0;
     // const handleBuuttonClick = () =>{
     //     value++;
     //     console.log(value);
 };
-function ChildComponent({count}) {
-    console.log("child component rendered");
-    return(
-     <div className="main-div">
-       <h2>child component - {count}</h2>
-        </div>
-    ); 
-};
+// function ChildComponent({count}) {
+//     console.log("child component rendered");
+//     return(
+//      <div className="main-div">
+//        <h2>child component - {count}</h2>
+//         </div>
+//     ); 
+// };
 
 
