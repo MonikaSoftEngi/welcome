@@ -174,22 +174,18 @@
 
   // ******react state
 
-  import "./componets/Ev.css";
-import {state}from "./componets/hooks/state";
-  export const App = () => {
-    return (
-      <section className="container">
-     <state/>
-     <sibling/>
+//   
+
+
+
+import { Derivedstate} from "./components/Derivedstate";
+import "./components/Ev.css";
+
+export const App = () => {
+  return (
+    <section className="container">
+
+  <derivedstate/>
     </section>
-  
-    );
-  };
-  export function sibling() {
-    console.log("child component rendered");
-    return(
-     <div className="main-div">
-       <h2>sibling component </h2>
-        </div>
-    ); 
-};
+  )
+}

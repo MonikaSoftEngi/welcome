@@ -8,18 +8,24 @@ export const Derivedstate = () => {
     { name: "Angles", age: 45 },
   ]);
 
+console.log(users);
+const usercount =users.length;
+
+const averageAge = users.reduce((accum,curElem)= accum + curElem.age,0) /userCont;
   return (
-    <div className="main-div">
+    <div className="man-div">
       <h1>Users List</h1>
       <ul>
-        {Users.map((curElem, index) => {
-          return (
+        {Users.map((user, index) => {
+          
             <li key={index}>
-              {curElem.name} - {curElem.age} year old
+              {user.name} - {user.age} years old
             </li>
-          );
+          
         })}
       </ul>
+      <p>Total Users:{userCount} </p>
+    
     </div>
   );
 };
