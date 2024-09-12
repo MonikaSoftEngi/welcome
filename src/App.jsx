@@ -178,14 +178,14 @@
 
 
 
-import { Derivedstate} from "./components/Derivedstate";
+// import { Derivedstate} from "./components/Derivedstate";
 import "./components/Ev.css";
-
+import { Liftingstate} from "./components/Liftingstate";
 export const App = () => {
   return (
     <section className="container">
 
-  <derivedstate/>
+  <Liftingstate/>
     </section>
   )
 }
