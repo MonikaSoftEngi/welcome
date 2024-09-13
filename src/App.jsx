@@ -5,21 +5,20 @@
 
 // console.log(React.createElement("h1", null, "Hello,Thapa Technical."));
 
-
-// export const App = () => 
+// export const App = () =>
 // {
 //   return(
 //     <div>
 //       <div>
-//       <img src="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg" 
-//       alt="Queen of Tears"   
+//       <img src="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg"
+//       alt="Queen of Tears"
 //       width="40%" hight="40%"/>
 //       </div>
 // <h2>Name: Queen of Tears</h2>
 // <h3>Rating:8.2</h3>
 // <p>sumamry:Baek Hyun-woo and hong hae-in navigate a tense relationship,
-//      both at home at a work. but upon deciding his future, 
-//     hun-woo pas a visitto his family.  
+//      both at home at a work. but upon deciding his future,
+//     hun-woo pas a visitto his family.
 //     </p>
 //     </div>
 //   );
@@ -28,7 +27,7 @@
 // import {Fregment} from "react";
 // export const App = () => {
 //   return(
-    
+
 //      <Fragment>
 //       <NetflixSeries/>
 //       <NetflixSeries/>
@@ -38,20 +37,20 @@
 //       </Fragment>
 //   );
 // };
-// const NetflixSeries = () => 
+// const NetflixSeries = () =>
 //   {
 //     return(
 //       <div>
 //         <div>
-//         <img src="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg" 
-//         alt="Queen of Tears"   
+//         <img src="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg"
+//         alt="Queen of Tears"
 //         width="40%" hight="40%"/>
 //         </div>
 //   <h2>Name: Queen of Tears</h2>
 //   <h3>Rating:8.2</h3>
 //   <p>sumamry:Baek Hyun-woo and hong hae-in navigate a tense relationship,
-//        both at home at a work. but upon deciding his future, 
-//       hun-woo pas a visitto his family.  
+//        both at home at a work. but upon deciding his future,
+//       hun-woo pas a visitto his family.
 //       </p>
 //       </div>
 //     );
@@ -74,7 +73,7 @@
 // const rating = "8.2";
 // const summary =
 // "Baek Hyun-woo and hong hae-in navigate a tense relationship,";
-//       //  both at home at a work. but upon deciding his future, 
+//       //  both at home at a work. but upon deciding his future,
 //       // hun-woo pas a visitto his family.";
 //       let age = 1;
 //       const returnGanre  = () => {
@@ -86,7 +85,7 @@
 //         return (
 //           <div>
 //             <div>
-//               <img src ="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg" 
+//               <img src ="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg"
 //               alt="Queen of Tears" width="40%"hight="40%" />
 //             </div>
 //             <h2>Name: {name} </h2>
@@ -96,11 +95,11 @@
 //           </div>
 //         );
 //         };
-      
+
 // return (
 //   <div>
 //     <div>
-//       <img src ="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg" 
+//       <img src ="om/wp-content/uploads/2024/02/kim-soo-hyun-kim-ji-won-queen-of-tears-1-696x442.jpg"
 //       alt="Queen of Tears" width="40%"hight="40%" />
 //     </div>
 //     <h2>Name: {name} </h2>
@@ -110,8 +109,6 @@
 //   </div>
 // );
 // };
-
-
 
 // import NetfllixSeries from "./components/NetflixSeries";
 // export const App = ()  => {
@@ -126,13 +123,9 @@
 //   );
 // };
 
-
 // export default NetflixSeries;
 
-
-
-
-// import 
+// import
 //   NetflixSeries, { Footer ,Header }
 
 // from "./components/NetflixSeries";
@@ -159,33 +152,25 @@
 // export const App = () => {
 // return (
 //     <Section className="container">
-      // {/* <h1 className="card-heading">List of Best Netflix series</h1>
-    // <NetflixSeries/>; */}
-  //   <EventHandling/>
-  //   <Eventprops/>
-  //   </Section>
-  // );
-  // };
+// {/* <h1 className="card-heading">List of Best Netflix series</h1>
+// <NetflixSeries/>; */}
+//   <EventHandling/>
+//   <Eventprops/>
+//   </Section>
+// );
+// };
 
+// ******react state
 
-
-
-
-
-  // ******react state
-
-//   
-
-
+//
 
 // import { Derivedstate} from "./components/Derivedstate";
 import "./components/Ev.css";
-import { Liftingstate} from "./components/Liftingstate";
+import { ToggleSwitch } from "./project/ToggleSwitch/ToggleSwitch";
 export const App = () => {
   return (
     <section className="container">
-
-  <Liftingstate/>
+      <ToggleSwitch />
     </section>
-  )
-}
+  );
+};
