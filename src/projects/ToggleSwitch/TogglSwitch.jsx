@@ -13,7 +13,9 @@ const checkIson =ison ? "on" : "off";
 const toggleBGColor = {backgroundcolor:isOn ? "#4caf50" : "#f44336"}
   return (
     <>
-    <h1  style={{ color:"#000", textAlign:"center"}}>
+    <h1  style={{ color:"#000", textAlign:"center"
+      
+    }}>
       Toggle Switch  {" "}
       <IoIosSwitch style={{ color:"red", textAlign:"center"}}   />
       <piUserSwitchFill/>

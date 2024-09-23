@@ -165,12 +165,21 @@
 //
 
 // import { Derivedstate} from "./components/Derivedstate";
+// import "./components/Ev.css";
+// import { ToggleSwitch } from "./project/ToggleSwitch/ToggleSwitch";
+// export const App = () => {
+//   return (
+//     <section className="container">
+//       <ToggleSwitch />
+//     </section>
+//   );
+// };
+
 import "./components/Ev.css";
-import { ToggleSwitch } from "./project/ToggleSwitch/ToggleSwitch";
-export const App = () => {
-  return (
-    <section className="container">
-      <ToggleSwitch />
-    </section>
-  );
+import { Todo } from "./projects/Todo/Todo";
+export  const App  = () => {
+return <section> {<Todo/>}
+</section>
 };
+
+
