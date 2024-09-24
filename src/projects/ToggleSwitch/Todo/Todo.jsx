@@ -1,10 +1,12 @@
-import {useState} from "react";
-import {mdcheck,mdDeleteForever} from "react-icons/md";
+import { useState } from "react";
+import { mdcheck, mdDeleteForever } from "react-icons/md";
 
 import "./Todod.css";
 export const Todo = () => {
-  const [inputalue, setInputalue] = usestate("");
+  const [inputvalue, setInputvalue] = usestate("");
   const [task, setTask] = useStste([]);
+  const [dateTime, setDateTime] = useState("");
+
   const handleInputchange = (value) => {
     setinputvalue(value);
   };
@@ -20,11 +22,28 @@ export const Todo = () => {
     setTask((prevTask) => [...prevTask, inputvalue]);
 
     setInputvalue(" ");
+    // console.log("Hey");
   };
+ 
+  
+  // todo date and time
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString();
+      const formattedTime = now.toLocaleTimeString();
+      setDateTime(`$ {formatedDate}-$ {formatedTime}`);
+    }, 1000);
+    return () => clearInterval(interval);
+  } ,[]);
+  
   return (
     <section className="todo-container">
       <header>
         <h1>Todo List</h1>
+        <h2 className="date-time">{dateTime}</h2>
       </header>
       <section className="form">
         <form onSubmit={handleFormSubmit}>
@@ -44,23 +63,21 @@ export const Todo = () => {
           </div> */}
         </form>
         <section className="myUnorddList">
-      <ul>
-        {
-            task.map((curTask, index ) => {
+          <ul>
+            {task.map((curTask, index) => {
               return (
-              <li key={index}className="todo-item">
-              <span>{curTask}</span> 
-              <button className="check-dtn">
-                <mdCheck/>
-                </button> 
-              <button className="delete-btn">
-                <mdDeleteForever/>
-                </button> 
-              </li>
+                <li key={index} className="todo-item">
+                  <span>{curTask}</span>
+                  <button className="check-btn">
+                    <mdCheck />
+                  </button>
+                  <button className="delete-btn">
+                    <mdDeleteForever />
+                  </button>
+                </li>
               );
-            })
-        }
-      </ul>
+            })}
+          </ul>
         </section>
       </section>
     </section>
