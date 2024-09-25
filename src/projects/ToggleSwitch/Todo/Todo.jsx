@@ -39,6 +39,16 @@ export const Todo = () => {
     return () => clearInterval(interval);
   } ,[]);
   
+// todo handleClearTodoData functionality
+
+const handleClearTodoData = () => {
+  setTask([]);
+// console.log(task);
+// console.log(value);
+// const updatedTask = task.filter((curTask)=> curTask === value );
+// setTask(updatedTask);
+};
+
   return (
     <section className="todo-container">
       <header>
@@ -51,6 +61,7 @@ export const Todo = () => {
             <input
               type="text"
               className="todo-input"
+              
               autoComplete="off"
               value={inputvalue}
               onchange={(event) => handleInputchange(event.target.value)}
@@ -64,20 +75,24 @@ export const Todo = () => {
         </form>
         <section className="myUnorddList">
           <ul>
-            {task.map((curTask, index) => {
+            {/* {task.map((curTask, index) => {
               return (
                 <li key={index} className="todo-item">
                   <span>{curTask}</span>
                   <button className="check-btn">
                     <mdCheck />
                   </button>
-                  <button className="delete-btn">
+                  <button className="delete-btn" on click= {handelDeleteTodo(curTask)} 
+                  >
                     <mdDeleteForever />
                   </button>
                 </li>
               );
-            })}
+            })} */}
+
+
           </ul>
+          <button className="clear-btn" onclick= {handleClearToDoDeta }  >clear all</button>
         </section>
       </section>
     </section>
