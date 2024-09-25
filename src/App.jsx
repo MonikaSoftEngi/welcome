@@ -175,7 +175,7 @@
 //   );
 // };
 
-import "./components/Ev.css";
+import "./components/Ev.css"
 import { Todo } from "./projects/Todo/Todo";
 export  const App  = () => {
 return <section> {<Todo/>}
