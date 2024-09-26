@@ -1,15 +1,16 @@
  import {useState} from "./TodoForm";
 
  export  const TodoFoam = ({onAddTodo}) => {
-    const [inputvalue, setInputvalue] = usestate("");
+    const [inputvalue, setInputvalue] = usestate({});
+
     const handleInputchange = (value) => {
-        setinputvalue(value);
-      };
+        setinputvalue({id: value, content:value, checked: false});
+    };
       const handleFormSubmit = (event) => {
         event.preventDefault();
         onAddTodo(inputvalue)
-        setInputvalue("");
-      }
+        setInputvalue({id:"",content:"", checked:false});
+      };
     return (
 <section className="form">
         <form onSubmit={handleFormSubmit}>
@@ -19,7 +20,7 @@
               className="todo-input"
               
               autoComplete="off"
-              value={inputvalue}
+              value={inputvalue.content}
               onchange={(event) => handleInputchange(event.target.value)}
             />
           </div>

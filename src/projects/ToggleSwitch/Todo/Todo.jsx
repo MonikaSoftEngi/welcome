@@ -3,21 +3,31 @@ import "./Todod.css";
 import { TodoFoam} from ".TodoForm";
 import { TodoList} from "./TodoList"
 import {TodoDate} from "./TodoDate";
+
 export const Todo = () => {
-  
- const [task, setTask] = useStste([]);
+  const [task, setTask] = useStste([]);
+
   const handleFormSubmit = (inputValue) => {
-    if (!inptvalue) return;
-    if (task.includes(inputValue)) 
+    const {id , content, checked} = inputvalue;
+
+// to check if the input field is empty or not
+    if (content) return;
+
+    // to check if the data is already existing or not
+    // if (task.includes(inputValue)) 
+    const ifTodoContentMatched = task.find((curTask) => curTaskk.content ===content
+  );
       return;
-     setTask((prevTask) => [...prevTask, inputValue]);
+
+     setTask((prevTask) => [...prevTask, {id,content, checked},
+
+     ]);
      };
 
  // todo handleDeleteTodo function
  const handleDelelteTodo = (value) => {
-  console.log(task);
-  console.log(value)
-  const updateTask = task.filter((curTask) => curTask );
+ 
+  const updateTask = task.filter((curTask) => curTask.content );
 setTask(updatedTask);
 };
 
@@ -26,6 +36,19 @@ setTask(updatedTask);
 const handleClearTodoData = () => {
   setTask([]);
 }
+// todohandelcheckedTodo functionality
+const handleCheckedTodoData = (content) => {
+const updatedtask = task.map((curTask) =>{
+  if(curTask.content === content){
+    return {...curTask, checked:!curTask.checked};
+
+  }
+  else {
+    return curTask;
+  }
+});
+setTask(updatedtask);
+};
   return (
     <section className="todo-container">
       <header>
@@ -35,10 +58,16 @@ const handleClearTodoData = () => {
       <TodoForm onAddTodo = {handleFormSubmit}/>
       <section className="myUnorddList">
           <ul>
-            {task.map((curTask, index) => {
-              return <TodoList key={index}data={curTask}
-              onHandleDeleTodo={handleDeleteTodo} />;
-              })}
+            {task.map((curTask) => {
+              return (
+              <TodoList 
+              key={curTask.id}
+              data={curTask.content}
+              checked={curTask.checked}
+              onHandleDeleTodo={handleDeleteTodo} 
+              onHandelCheckedTodo={handleCheckedTodo}/>
+              );
+            })}
            </ul>
           <button className="clear-btn" onclick= {handleClearToDoDeta }  >clear all</button>
         </section>
