@@ -175,10 +175,11 @@
 //   );
 // };
 
-// import "./components/Ev.css"
-import { key } from ".key";
+import "./components/Ev.css"
+import ShortCircuitExampl from "./components/hortircuit";
+
 export  const App  = () => {
-return  <key/>
+return  <section>{<ShortCircuitExampl/>}</section>;
 };
 
 
