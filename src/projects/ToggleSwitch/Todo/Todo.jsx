@@ -1,11 +1,10 @@
+
 import { useState } from "react";
 import "./Todod.css";
 import { TodoFoam } from ".TodoForm";
 import { TodoList } from "./TodoList";
 import { TodoDate } from "./TodoDate";
 import {getLocalStorageTododata} from "./TodoLocalStorage";
-
-
 
 export const Todo = () => {
   const [task, setTask] = useState(() => getLocalStorageTodoData());
@@ -19,7 +18,7 @@ export const Todo = () => {
     // to check if the data is already existing or not
     // if (task.includes(inputValue))
     const ifTodoContentMatched = task.find(
-      (curTask) => curTaskk.content === content
+      (curTask) => curTask.content === content
     );
     return;
 
