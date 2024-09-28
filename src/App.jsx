@@ -175,11 +175,11 @@
 //   );
 // };
 
-import "./components/Ev.css"
-import ShortCircuitExampl from "./components/hortircuit";
+// import "./components/Ev.css"
+import {Counter} from "./components/hooks/useState";
 
 export  const App  = () => {
-return  <section>{<ShortCircuitExampl/>}</section>;
+return  <counter/>;
 };
 
 
