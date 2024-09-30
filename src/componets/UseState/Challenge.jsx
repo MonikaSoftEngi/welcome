@@ -1,7 +1,8 @@
+import { useState } from "react";
 import "../Hooks.css";
 const CounterChallenge = () => {
     const [count,setCount]= useState(0);
-    const [setp,setstep] = useState(0);
+    const [step,setstep] = useState(0);
     const handleIncrement = () => {
         setCount(count + step);
     };
@@ -16,7 +17,7 @@ const CounterChallenge = () => {
 
   return (
     <div className="container state-container">
-      <h1>UseState Chalenge</h1>
+      <h1>UseState Challenge</h1>
       <p>
         Count:<span>{count}</span>
       </p>
@@ -28,11 +29,11 @@ const CounterChallenge = () => {
         </table>
       </div>
       <div className="grid-three-cols">
-        <button onClick={HandelIncrement} disabled={count > 100}
+        <button onClick={HandleIncrement} disabled={count > 100}
             >Increment</button>
-        <button onClick={HandelDecrement} disabled={count < 0}>
+        <button onClick={HandleDecrement} disabled={count < 0}>
             Decrement</button>
-        <button onClick={handelReset}>Reset</button>
+        <button onClick={handleReset}>Reset</button>
       </div>
     </div>
   );
