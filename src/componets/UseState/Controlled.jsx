@@ -14,6 +14,7 @@ const controlledForm = () => {
 
   //     const datavalue = document.querySelector("#inputName") value;
   //     console.log(datavalue);
+
   console.log(name);
    };
 
@@ -21,12 +22,12 @@ const controlledForm = () => {
      <section className="container state-container">
       <h1>unControlled Componet</h1>
       <foam onSubmit={handleSubmit}>
-        <label>
+        <lable>
           Name:
           <input id="inputName" name="name" type="text" 
            value="monika"
            onChange={handleChange} />
-        </label>
+        </lable>
         <br />
         <button type="submit" className="state-button">
           Submit

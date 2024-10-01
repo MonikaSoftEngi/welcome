@@ -184,10 +184,17 @@
 
 
 
-import ControlledForm from "./components/hooks/useState/Controlled";
+// import ControlledForm from "./components/hooks/useState/Controlled";
 
-export const App = () =>
-{
+// export const App = () =>
+// {
 
-}
+// };
+
+
+import { RegistrationForm } from "./componets/UseState/Registration";
+export const App = () => {
+    return <RegistrationFormReact/>
+};
+
 
