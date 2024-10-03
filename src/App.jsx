@@ -170,7 +170,6 @@
 // export const App = () => {
 //   return (
 
-
 //       <ToggleSwitch />
 //     </section>
 //   );
@@ -182,8 +181,6 @@
 // return  <counterChallenge />;
 // };
 
-
-
 // import ControlledForm from "./components/hooks/useState/Controlled";
 
 // export const App = () =>
@@ -191,10 +188,13 @@
 
 // };
 
+// import { RegistrationForm } from "./componets/UseState/Registration";
+// export const App = () => {
+//   return <RegistrationFormReact />;
+// };
 
-import { RegistrationForm } from "./componets/UseState/Registration";
+import {LoginForm} from "./components/hooks/useState/LoginForm";
+
 export const App = () => {
-    return <RegistrationFormReact/>
+    return <LoginForm/>
 };
-
-
