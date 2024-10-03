@@ -1,4 +1,4 @@
-import { password } from "bun";
+import { password } from "npm";
 import "./index.css";
 import { useState } from "react";
 export const RegistrationFormReact = () => {
@@ -24,7 +24,7 @@ const handleFormSubmit = (event) => {
     return (
     <>
     <form onSubmit={handleFormSubmit}></form>
-      <div clssNmae="container">
+      <div className="container">
         <h1>Sign Up</h1>
      <p>please fill in this form to create an account.
 
