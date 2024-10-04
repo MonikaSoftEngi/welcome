@@ -5,7 +5,7 @@ import { password } from "bun";
 
 export const LoginForm = () => {
     const [username, setUsername] = useState("");
-    const [Passwor, setPassword] = useState("");
+    const [Password, setPassword] = useState("");
 
 const handleFormSubmit = (e) => {
     e.preventDefault();

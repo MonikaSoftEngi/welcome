@@ -193,9 +193,19 @@
 //   return <RegistrationFormReact />;
 // };
 
-import { ContactForm } from "./components/hooks/useState/ContactForm";
+// import { ContactForm } from "./components/hooks/useState/ContactForm";
+
+// export const App = () => {
+
+//     return <ContactForm/>;
+// };
+
+
+
+import { ReactUseEffect } from "./components/hooks/useState/UseEffect";
 
 export const App = () => {
 
-    return <ContactForm/>;
+    return <ReactUseEffect 
+    />;
 };
