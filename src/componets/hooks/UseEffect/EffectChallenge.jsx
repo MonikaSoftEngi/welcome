@@ -30,6 +30,7 @@ useEffect(()=>{
         value={name}
         onChange={() => setName(e.target.value)}
       />
+      
     </div>
   );
 };

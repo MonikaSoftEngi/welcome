@@ -212,9 +212,9 @@
 
 
 
-import { Challenge } from "./components/hooks/useState/Challenge";
+import {CleanUp } from "./components/hooks/useState/Cleanup";
 
 export const App = () => {
 
-    return <Challenge />;
+    return <Cleanup />;
 };
