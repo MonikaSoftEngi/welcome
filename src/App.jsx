@@ -212,7 +212,7 @@
 
 
 
-import {CleanUp } from "./components/hooks/useState/Cleanup";
+import {CleanUp } from "./components/hooks/useEffect/Cleanup";
 
 export const App = () => {
 

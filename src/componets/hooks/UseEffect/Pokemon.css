@@ -1,0 +1,22 @@
+
+
+.short-container {
+    width: 65rem;
+}
+
+& h1 {
+    margin-bottom: 3.2rem;
+}
+
+
+
+
+
+& p {
+    margin-bottom: 1.6rem;
+}
+
+& button {
+    padding: 0.rem 0;
+    cursor: pointer;
+}
