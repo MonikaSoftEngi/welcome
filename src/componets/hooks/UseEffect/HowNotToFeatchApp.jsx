@@ -9,22 +9,33 @@ export const HownotToFetchApi = () => {
 const [error, setError] = useState(null);
   const API = "https://pokeapi.co/api/v2/pokemon/pikachu";
 
-  const feachPokkemon = () => {
-    fetch(API)
-      .then((res) => res.json())
-      .then((data) => {
-        setApiData(data);
-        setLoading(false);
-      })
+  // const feachPokkemon = () => {
+  //   fetch(API)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setApiData(data);
+  //       setLoading(false);
+  //     })
 
-      .catch((error) => {
-        Console.log(error);
-        setError(error);
-        setLoading(false);
-      });
+  //     .catch((error) => {
+  //       Console.log(error);
+  //       setError(error);
+  //       setLoading(false);
+  //     });
+  // };
+  const fetchPokemon = async () => {
+    try {
+   const res =await fetch(API);
+   const data = await res.json();
+   setPokemon(dada);
+   setLoading(false);
+    }catch (error) {
+      console.log(error);
+      setError(error);
+      setLoading(false);
+    }
   };
-
-  useEffect(() => {
+useEffect(() => {
     fetchPokemon();
   }, []);
 
