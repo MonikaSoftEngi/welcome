@@ -212,9 +212,13 @@
 
 
 
-import {CleanUp } from "./components/hooks/useEffect/Cleanup";
+// import {CleanUp } from "./components/hooks/useEffect/Cleanup";
 
+// export const App = () => {
+
+//     return <Cleanup />;
+// };
 export const App = () => {
+    return < Pokemon/>;
 
-    return <Cleanup />;
 };

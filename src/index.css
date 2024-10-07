@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
-
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -85,24 +85,114 @@ text-decoration: none;
 
 .grid-two-cols {
   grid-template-columns: repeat(3,1fr);
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  background-color: #eff3ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 5.4rem;
+  font-weight: bold;
+  color: #000 !important;
+  text-align: center;
+}
+
+p,
+span {
+  font-size: 1.6rem;
+}
+li {
+  list-style: name;
+}
+span {
+  font-weight: bold;
+}
+.container {
+  max-width: 152rem;
+  margin: auto;
+}
+.grid-three-cols {
+  display: grid;
+  grid-templete-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  taxt-align: center;
+  margin: 3.2rem 0;
+}
+
+.pokemon--card {
+  width: 36rem;
+  min-height:42rem;
+  box-shadow: raba(0,0,0,0.05)0px 6px 24px 0px,
+  raba(0,0,0,0.08)0px 0px 0px 1px;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  -webkit-border-radius:0.2rem;
+  -moz-boder-radius:0.2rem;
+  -o-border-radius:0.2rem;
+ padding:1.6rem;
+ position:relative ;
 }
 
 
 
+.Pokemon-card::before {
+  -webkit-border-redius: 20rem;
+  -moz-border-redius: 20rem;
+  -ms-border-redius: 20rem;
+  -ms-border-redius: 20rem;
+  -o-border-redius: 20rem;
+  color: #fff;
+  font-weigth: bold;
+  text-transform: capitalize;
+}
 
+.Pokemon-image {
+  width: 60%;
+  height: 15rem;
+}
+pokemon image {
+  width: 60%;
+  height: 15rem;
+}
 
+Pokemon-info {
+  text-align: center;
+}
 
+.short-container {
+  width: 65rem;
+}
+& h1 {
+  margin-bottom: 3.2rem;
+}
 
+& p {
+  margin-bottom: 1rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+& button {
+  padding: 0.6rem 0;
+  cousor: ponter;
+}
