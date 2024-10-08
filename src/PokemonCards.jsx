@@ -14,7 +14,7 @@ export const PokemonCards =({PokemonData}) => {
             </p>
 
          </div>
-         <div className="grid--three-cols">
+         <div className="grid-three-cols">
             <p>{PokemonData.base_experience}</p>
            <span> Experience:</span> 
             </div>

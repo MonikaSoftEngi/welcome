@@ -218,7 +218,13 @@
 
 //     return <Cleanup />;
 // };
-export const App = () => {
-    return < Pokemon/>;
+// export const App = () => {
+//     return < Pokemon/>;
 
-};
+// };
+
+
+import {UseRef } from "./componets/hooks/useRefs";
+ export const App = () => {
+    return <UseRef/>;
+ }
