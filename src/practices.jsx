@@ -1,14 +1,14 @@
-export const practices = () => {
-   const students = [];
+// export const practices = () => {
+//    const students = [];
 
- return (
-<>
+//  return (
+// <>
     
-        <p>{student.length && "No students found"}</p>
-        <p>Number of student: {student.length}</p>
-    </>
- );
-};
+//         <p>{student.length && "No students found"}</p>
+//         <p>Number of student: {student.length}</p>
+//     </>
+//  );
+// };
 
 
 

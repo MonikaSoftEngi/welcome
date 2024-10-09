@@ -165,21 +165,21 @@
 
 
 
-import SeriesData from "../src/api/seriesData.json";
+// import SeriesData from "../src/api/seriesData.json";
 
-import { SeriesCard } from "../src/componets/SeriesCard";
+// import { SeriesCard } from "../src/componets/SeriesCard";
 
 
-const NetflixSeries = () => {
-  return (
-  <ul className = "grid grid-three--cols">
-  {SeriesData.map((curElem) => ( 
-  <SeriesCard  key={curElem.id} curElem={curElem} />
-  ))}
-  </ul>
-  );
-};
-export default NetflixSeries;
+// const NetflixSeries = () => {
+//   return (
+//   <ul className = "grid grid-three--cols">
+//   {SeriesData.map((curElem) => ( 
+//   <SeriesCard  key={curElem.id} curElem={curElem} />
+//   ))}
+//   </ul>
+//   );
+// };
+// export default NetflixSeries;
 
 
 
