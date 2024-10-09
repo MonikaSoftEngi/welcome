@@ -33,7 +33,6 @@ const GrandGrandChlidComponent = (props) => {
     return (
       <>
         <h1>Hello, I  Love React Js {props.data}</h1>
-        
-      </>
+</>
     );
   };
