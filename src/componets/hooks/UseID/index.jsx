@@ -30,8 +30,8 @@ export const UseId = () => {
         <input type="text" id={id + "usernameId"} name="name" />
       </div>
       <div>
-        <label htmlFor={id + "passwoedId"}>Username:</label>
-        <input type="text" id={id + "passwoedId"} name="password" />
+        <label htmlFor={id + "passwordId"}>Username:</label>
+        <input type="text" id={id + "passwordId"} name="password" />
       </div>
       <div>
         <label htmlFor={id + "emailId"}>Email:</label>

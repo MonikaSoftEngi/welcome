@@ -224,8 +224,16 @@
 // };
 
 
-import {ForewordRefs } from "./componets/hooks/ useRef/ForewordRefs";
+// import {ForewordRefs } from "./componets/hooks/ useRef/ForewordRefs";
+ 
+// export const App = () => {
+//     return <ForewordRefs/>;
+//  }
+
+import {ParentComponent } from "./componets/hooks/ ParentComponent";
  
 export const App = () => {
-    return <ForewordRefs/>;
- }
+    return <ParentComponent/>;
+
+}
+
