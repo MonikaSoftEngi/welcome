@@ -200,17 +200,13 @@
 //     return <ContactForm/>;
 // };
 
-
-
 // import { ReactUseEffect } from "./components/hooks/useState/UseEffect";
 
 // export const App = () => {
 
-//     return <ReactUseEffect 
+//     return <ReactUseEffect
 //     />;
 // };
-
-
 
 // import {CleanUp } from "./components/hooks/useEffect/Cleanup";
 
@@ -223,17 +219,26 @@
 
 // };
 
-
 // import {ForewordRefs } from "./componets/hooks/ useRef/ForewordRefs";
- 
+
 // export const App = () => {
 //     return <ForewordRefs/>;
 //  }
 
-import {ParentComponent } from "./componets/hooks/ ParentComponent";
- 
+// import { ParentComponent } from "./componets/hooks/ ParentComponent";
+
+// export const App = () => {
+//   return <ParentComponent />;
+// };
+
+
+import { BioPorvider } from "./hooks/ContextAPI";
+import {Home} from "/hooks/ContextAPI/Home";
 export const App = () => {
-    return <ParentComponent/>;
-
-}
-
+  return (
+  <BioProvider>
+ <Home/>
+  </BioProvider>
+ 
+  );
+};
