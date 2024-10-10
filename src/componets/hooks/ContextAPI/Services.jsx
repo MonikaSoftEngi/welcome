@@ -1,8 +1,8 @@
-import{ useContext} from "react";
- import { BioContext } from ".";
+// import{ useContext} from "react";
+ import { useBioContext } from ".";
 
  export const About = ()=>{
- const {MyName, MyAge} = useContext(BioContext);
+ const {MyName, MyAge} = useBioContext();
     
     return(
      <section  className ={`p-4 h-Lvh font-display taracking-wider flex
@@ -14,3 +14,4 @@ import{ useContext} from "react";
      </section>
     );
     };
+

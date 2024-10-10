@@ -10,10 +10,16 @@ export const BioContext = createContext();
     console.log(children);
 
     return (
-    <BioContext.Provider value ={{myName:myName, MyAge:MyAge}}>
-        {children}
-        </BioContext.Provider>
+    <BioContext.Provider value ={{myName, MyAge}}>
+ {children}
+
+ </BioContext.Provider>
     );
 };
 
 
+// custom hook
+const useBioContext =() => {
+    const context = useContext(BioContext);
+    return context;
+};
