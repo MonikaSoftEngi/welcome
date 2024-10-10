@@ -232,13 +232,31 @@
 // };
 
 
+// import { BioPorvider } from "./hooks/ContextAPI";
+// import {Home} from "/hooks/ContextAPI/Home";
+// export const App = () => {
+//   return (
+//   <BioProvider>
+//  <Home/>
+//   </BioProvider>
+ 
+//   );
+// };
+
+
 import { BioPorvider } from "./hooks/ContextAPI";
+import {About} from "/hooks/ContextAPI/About";
 import {Home} from "/hooks/ContextAPI/Home";
+import {Services} from "/hooks/ContextAPI/Services";
 export const App = () => {
   return (
+    <>
   <BioProvider>
  <Home/>
+ <About/>
+ <Services/>
   </BioProvider>
  
+ </>
   );
 };
