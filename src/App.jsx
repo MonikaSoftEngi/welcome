@@ -261,14 +261,24 @@
 //   );
 // };
  
-import {DarkLight, ThemeProvider} from "./hooks/ContextAPI/DarkLight";
+// import {DarkLight, ThemeProvider} from "./hooks/ContextAPI/DarkLight";
 
+// export const App = () => {
+//   return (
+//    <>
+//    <ThemeProvider>
+//     <DarkLight/>
+//    </ThemeProvider>
+//   </>
+//   );
+// };
+
+
+import  {ReducerComp} from "./hooks/UseReducer";
 export const App = () => {
   return (
-   <>
-   <ThemeProvider>
-    <DarkLight/>
-   </ThemeProvider>
-  </>
+    <>
+    <RedducerComp/>
+    </>
   );
 };
