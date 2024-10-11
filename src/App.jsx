@@ -244,19 +244,31 @@
 // };
 
 
-import { BioPorvider } from "./hooks/ContextAPI";
-import {About} from "/hooks/ContextAPI/About";
-import {Home} from "/hooks/ContextAPI/Home";
-import {Services} from "/hooks/ContextAPI/Services";
+// import { BioPorvider } from "./hooks/ContextAPI";
+// import {About} from "/hooks/ContextAPI/About";
+// import {Home} from "/hooks/ContextAPI/Home";
+// import {Services} from "/hooks/ContextAPI/Services";
+// export const App = () => {
+//   return (
+//     <>
+//   <BioProvider>
+//  <Home/>
+//  <About/>
+//  <Services/>
+//   </BioProvider>
+ 
+//  </>
+//   );
+// };
+ 
+import {DarkLight, ThemeProvider} from "./hooks/ContextAPI/DarkLight";
+
 export const App = () => {
   return (
-    <>
-  <BioProvider>
- <Home/>
- <About/>
- <Services/>
-  </BioProvider>
- 
- </>
+   <>
+   <ThemeProvider>
+    <DarkLight/>
+   </ThemeProvider>
+  </>
   );
 };

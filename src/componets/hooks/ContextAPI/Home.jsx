@@ -1,9 +1,12 @@
- import{ useContext} from "react";
- import { BioContext } from ".";
+ import{ useBioContext} from "react";
+//  import { BioContext } from ".";
 
  export const Home = ()=>{
- const {MyName, MyAge} = useContext(BioContext);
+ const {MyName, MyAge} = useBioContext();
     
-    return <h1>Hello Context API. My name is {MyName}. I am {Myage}  yrs old</h1>;
+    return <h1>Hello Context API. My name is {MyName}. I am {MyAge}  yrs old</h1>;
  };
+ 
+
+
  
