@@ -278,7 +278,8 @@ import  {ReducerComp} from "./hooks/UseReducer";
 export const App = () => {
   return (
     <>
-    <RedducerComp/>
+    <ReducerComp/>
     </>
   );
 };
+
