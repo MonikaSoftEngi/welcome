@@ -283,12 +283,16 @@
 //   );
 // };
 
-import {ReactMemo} from "./hooks/Memo/ReactMemo";
+import {ExpensiveComponent} from "./hooks/Memo/ExpensiveComponent";
 
 export const App = () => {
   return (
     <>
-    <ReactMemo />
+    <ExpensiveComponent />
     </>
   );
 };
+
+
+
+
