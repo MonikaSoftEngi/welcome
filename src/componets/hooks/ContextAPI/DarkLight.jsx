@@ -1,3 +1,4 @@
+
 import { createContext, use,useState } from "react";
 
 export const ThemeContext = createContet();
@@ -20,7 +21,7 @@ export const ThemeProvider = ({ Children }) => {
 export const DarkLight = () => {
     const { theme, handleToggleTheme } = use(ThemeContext);
   return (
-    <div className= {`p-4 h-lvh flex flex--col justify-center items-center 
+    <div className= {`p-4 h-lvh flex flex-col justify-center items-center 
          ${ theme === "dark" ? "bg-gray=800" : "bg-white"} 
          `}>
 

@@ -274,12 +274,21 @@
 // };
 
 
-import  {ReducerComp} from "./hooks/UseReducer";
+// import  {ReducerComp} from "./hooks/UseReducer";
+// export const App = () => {
+//   return (
+//     <>
+//     <ReducerComp/>
+//     </>
+//   );
+// };
+
+import {ReactMemo} from "./hooks/Memo/ReactMemo";
+
 export const App = () => {
   return (
     <>
-    <ReducerComp/>
+    <ReactMemo />
     </>
   );
 };
-
