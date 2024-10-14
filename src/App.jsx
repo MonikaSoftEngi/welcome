@@ -283,12 +283,22 @@
 //   );
 // };
 
-import {ReactMemo} from "./hooks/Memo/ReactMemo";
+// import {ReactMemo} from "./hooks/Memo/ReactMemo";
+
+// export const App = () => {
+//   return (
+//     <>
+//     <ReactMemo />
+//     </>
+//   );
+// };
+
+import {Button} from "./hooks/Memo/Button";
 
 export const App = () => {
   return (
     <>
-    <ReactMemo />
+    <Button />
     </>
   );
 };
