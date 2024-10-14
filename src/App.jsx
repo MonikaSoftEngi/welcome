@@ -231,7 +231,6 @@
 //   return <ParentComponent />;
 // };
 
-
 // import { BioPorvider } from "./hooks/ContextAPI";
 // import {Home} from "/hooks/ContextAPI/Home";
 // export const App = () => {
@@ -239,10 +238,9 @@
 //   <BioProvider>
 //  <Home/>
 //   </BioProvider>
- 
+
 //   );
 // };
-
 
 // import { BioPorvider } from "./hooks/ContextAPI";
 // import {About} from "/hooks/ContextAPI/About";
@@ -256,11 +254,11 @@
 //  <About/>
 //  <Services/>
 //   </BioProvider>
- 
+
 //  </>
 //   );
 // };
- 
+
 // import {DarkLight, ThemeProvider} from "./hooks/ContextAPI/DarkLight";
 
 // export const App = () => {
@@ -272,7 +270,6 @@
 //   </>
 //   );
 // };
-
 
 // import  {ReducerComp} from "./hooks/UseReducer";
 // export const App = () => {
@@ -293,16 +290,45 @@
 //   );
 // };
 
-import {Button} from "./hooks/Memo/Button";
+// import {Button} from "./hooks/Memo/Button";
 
-export const App = () => {
-  return (
-    <>
-    <Button />
-    </>
-  );
+// export const App = () => {
+//   return (
+//     <>
+//     <Button />
+//     </>
+//   );
+// };
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Home } from "./Pages/Home";
+import { About } from "./Pages/About";
+import { Movie } from "./Pages/Movie";
+import { Contact } from "./Pages/Contact";
+
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+
+{
+ path: "/about",
+ element: <About />
+},
+
+{
+  path: "/Movie",
+  element: <movie />
+},
+{
+path: "/contact",
+element: <Contact />,
+} ,
+]);
+ 
+return <RouterProvider router={router} />;
 };
 
-
-
-
+export default App;

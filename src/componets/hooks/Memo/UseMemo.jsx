@@ -1,3 +1,4 @@
+
 import { useMemo, useState } from "react";
 
 const ExpensiveComponent =  () => {
@@ -22,11 +23,11 @@ const ExpensiveComponent =  () => {
           const [count, setCount] = useState(0); 
 
          return (
-            <div className=" p-4 h-52 font-display tracking-wider flex flex-col justify-end items-center bg--black text-white">
+            <div className=" p-4 h-52 font-display tracking-wider flex flex-col justify-end items-center bg-black text-white">
            <ExpensiveComponent/>
            <button onClick={() =>  setCount(count + 1)}
            className="py=3 px-6 bg-cyan-400 rounded-sm"
-         Re-resnder parent>
+         Re-rernder parent>
              </button>
           <p>Parent re-renders: {count}</p>
           </div>
