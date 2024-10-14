@@ -3,6 +3,16 @@ import {Counts} from "./MemoCount";
 
 export const ReactMemo  = () => {
 const [count, setCount] = useState(0);
+
+const MyBioData = useMemo(() => {
+return {
+  
+  name:"thapa",
+  age:30,
+}
+},[])
+
+
 return (
     <>
     <div className="p-4 h-52 font-display tracking-wider flex flex-col justify-end items-center">
@@ -14,7 +24,7 @@ return (
           Increment
             </button>
        </div>
-       <Counts/>
+       <Counts bioData= {MyBioData}/>
     </>
 );
 };
