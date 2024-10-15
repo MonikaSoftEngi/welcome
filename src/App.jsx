@@ -301,10 +301,10 @@
 // };
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { Movie } from "./Pages/Movie";
 import { Contact } from "./Pages/Contact";
+import { Home } from "./Pages/Home";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -313,22 +313,22 @@ const App = () => {
       element: <Home />,
     },
 
-{
- path: "/about",
- element: <About />
-},
+    {
+      path: "/about",
+      element: <About />,
+    },
 
-{
-  path: "/Movie",
-  element: <movie />
-},
-{
-path: "/contact",
-element: <Contact />,
-} ,
-]);
- 
-return <RouterProvider router={router} />;
+    {
+      path: "/movie",
+      element: <Movie />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
