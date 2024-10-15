@@ -301,10 +301,10 @@
 // };
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { Movie } from "./Pages/Movie";
 import { Contact } from "./Pages/Contact";
-import { Home } from "./Pages/Home";
 const App = () => {
   const router = createBrowserRouter([
     {
