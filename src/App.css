@@ -50,3 +50,28 @@
 
 
 }
+.loader-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Loader {
+  --r1:154%;
+  --r2: 68.5% ;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+var(--r1)var(--r2)at top,
+#0000 79.5%,
+#269af2 80%
+),
+}
+
+
+
+
+
