@@ -307,8 +307,9 @@ import { Movie } from "./Pages/Movie";
 import { Contact } from "./Pages/Contact";
 import AppLayout from "./componets/Layout/AppLayout";
 import "./App.css";
-import { ErrorPage } from "./Pages/ErrorPage";
+import { ErrorPage} from "./Pages/ErrorPage";
 // import { NotFound } from "./Pages/NotFound";
+import { getMovieData } from "./api/GetAPIData";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -330,6 +331,7 @@ const App = () => {
         {
           path: "/movie",
           element: <Movie />,
+          Loader:getMovieData,
         },
         {
           path: "/contact",
