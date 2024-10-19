@@ -8,6 +8,7 @@ export const getMoviesData =  async ()  => {
 const data  = resopnse.json();
 return data;
  } catch (error) {
+    
     console.log(error);
  }
 };
