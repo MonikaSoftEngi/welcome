@@ -1,6 +1,7 @@
-import {useRouteError} from "react-router-dom";
+import {NavLink ,useRouteError} from "react-router-dom";
 
 export const NotFound = ()=> {
+
     const error = useRouteError();
     if (error.status === 404){
         return (
@@ -19,9 +20,9 @@ export const NotFound = ()=> {
                         <p className="p-b">... Back to previous page</p>
                     </div>
                 </div>
-                <navLink to="/" className="btn">
+                <NavLink to="/" className="btn">
                 Go To The Home page
-                </navLink>
+                </NavLink>
             </section>
         );
     };

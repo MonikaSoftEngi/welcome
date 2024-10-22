@@ -1,21 +1,22 @@
-import { Outlet , useNavigation} from "react-router-dom";
+import { Outlet ,useNavigation,} from "react-router-dom";
 import {Footer } from "./Footer";
 import { Header } from "./Header";
+import { Loading } from "./Loading";
 
 const AppLayout = () => {
-
- const    navigation = useNavigation();
+const navigation = useNavigation();
   console.log(navigation);
 
   if (navigation.state ==="Loading") return <Loading />;
 
     return (
+
          <>
     <Header />
     <Outlet  />
-    <Footer />
+   <Footer />
     </>
     );
 };
 
-export default AppLayout;
+ export default AppLayout;

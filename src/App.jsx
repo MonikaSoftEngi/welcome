@@ -305,21 +305,22 @@ import { Home } from "./Pages/Home";
 import { About } from "./Pages/About";
 import { Movie } from "./Pages/Movie";
 import { Contact } from "./Pages/Contact";
-import AppLayout from "./componets/Layout/AppLayout";
+import AppLayout from "./Components/Layout/AppLayout";
 import "./App.css";
 import { ErrorPage } from "./Pages/ErrorPage";
 // import { NotFound } from "./Pages/NotFound";
-import { getMovieData } from "./api/GetAPIData";
-import { MovieDetails } from "./api/MovieDetails";
-import { getMoviesDetails } from "./api/GetMovieDetails";
+import { getMoviesData } from "./api/GetAPIData";
+import { MovieDetails } from "./Components/UI/MovieDetails";
+import { getMovieDetails } from "./api/GetMovieDetails";
+import { contactData } from "./Pages/Contact";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AppLayout />,
-      errorElement: <ErrorePage />,
-      children: [
+     element: <AppLayout />,
+      errorElement: <ErrorPage />,
+       children: [
         {
           path: "/",
           element: <Home />,
@@ -333,19 +334,21 @@ const App = () => {
         {
           path: "/movie",
           element: <Movie />,
-          Loader: getMovieData,
+          Loader: getMoviesData,
         },
 
         {
           path: "/movie/:movieID",
           element: <MovieDetails />,
-          Loader: getMoviesDetails,
+          Loader: getMovieDetails,
         },
 
         {
           path: "/contact",
           element: <Contact />,
+          action: contactData,
         },
+
         // {
         //   path: " * ",
         //   element: <NotFound />,
@@ -354,17 +357,33 @@ const App = () => {
     },
   ]);
 
-  //   const router = createBrowserRouter(
-  //     createRoutesFromElements(
-  //       <Route>
-  //         <Route  path="/"  element={<Home />} />
-  //         <Route  path="/about"  element={<About />} />
-  //         <Route  path="/movie"  element={<Movie />} />
-  //         <Route  path="/contact" element={<Contact />} />
-  //        </Route>
 
-  //     )
-  //   );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   //Router***
+         //     const router = createBrowserRouter(
+         //       createRoutesFromElements(
+          //         <Route>
+          //           <Route  path="/"  element={<Home />} />
+          //           <Route  path="/about"  element={<About />} />
+           //           <Route  path="/movie"  element={<Movie />} />
+       //           <Route  path="/contact" element={<Contact />} />
+           //          </Route>
+
+         //       )
+            //     );
 
   return <RouterProvider router={router} />;
 };

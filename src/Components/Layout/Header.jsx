@@ -1,16 +1,16 @@
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-    const getNavLinkStyle = ({isActive}) => {
-         return{
-                color: isActive ? "green" : "black",
-            };
-          };
-    
+  const getNavLinkStyle = ({ isActive }) => {
+    return {
+      color: isActive ? "green" : "black",
+    };
+  };
+
   return (
     <>
       <header className="section-navbar">
-        <section className="top_text">
+        <section className="top_txt">
           <div className="head container">
             <div className="head-txt">
               <p>Get Thapa Membership,30-day return or refund guarantea.</p>
@@ -32,47 +32,47 @@ export const Header = () => {
           <nav className="navbar">
             <ul>
               <li className="nav-bar">
-                <NavLink to="/" className={({isActive})=> 
-                    
-                        isActive ? "nav-Link active-Link": "nav-Link"
-                    }
-                    >
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "nav-Link active-Link" : "nav-Link"
+                  }
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/about"
-                 style={({isActive}) =>{
-                  return{
+                <NavLink
+                  to="/about"
+                  style={({ isActive }) => {
+                    return {
                       color: isActive ? "red" : "black",
-                  };
-                }}
+                    };
+                  }}
                 >
-                    about</NavLink>
+                  about
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="movie" className="nav-link" 
-                 style={({isActive}) =>{
-                  return{
-                      color: isActive ? "red" : "black",
-                  };
-                }}
+                <NavLink
+                  to="movie"
+                  className="nav-link"
+                  style={getNavLinkStyle}
                 >
                   movies
                 </NavLink>
               </li>
-              <li className="nav-item"
-              style={getNaviLinkStyle}
-              >
-
+              <li className="nav-item">
                 <NavLink to="contact" className="nav-link">
                   contact
                 </NavLink>
               </li>
-             </ul>
-           </nav>
+            </ul>
+          </nav>
         </div>
       </header>
     </>
   );
 };
+
+
