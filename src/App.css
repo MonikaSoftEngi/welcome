@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 } */
- 
+/*  
 .error-section {
   width:100%;
   min-height: 100vh;
@@ -76,9 +76,9 @@ var(--r1)var(--r2)at top,
 
 .section-whyy--choose.grid {
   gap:1.4rem;
-}
+} */
 
-.section-whyy--choose .text-align--right .why-choose-div {
+/* .section-whyy--choose .text-align--right .why-choose-div {
   align-items:flex-start;
 }
 
@@ -138,5 +138,5 @@ html {
   .grid {
     gap:6.4rem;
   }
-}
+} */
 

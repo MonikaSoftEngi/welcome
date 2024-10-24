@@ -86,7 +86,7 @@ text-decoration: none;
 .grid-two-cols {
   grid-template-columns: repeat(3,1fr);
 } */
-
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -195,4 +195,11 @@ Pokemon-info {
 & button {
   padding: 0.6rem 0;
   cousor: ponter;
-}
+} */
+
+
+
+
+
+
+
