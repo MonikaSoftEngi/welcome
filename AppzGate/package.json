@@ -1,0 +1,17 @@
+npm install @react-navigation/native @react-navigation/stack
+// # Additional dependencies for React Navigation
+npm install react-native-screens react-native-safe-area-context
+
+npm install formik yup
+
+npm install @react-native-async-storage/async-storage
+
+npm install react-native-paper
+
+
+npm install react-native-encrypted-storage
+
+npm install react-native-fast-image
+
+
+npm install @react-navigation/native @react-navigation/stack react-native-screens react-native-safe-area-context formik yup @react-native-async-storage/async-storage react-native-paper react-native-encrypted-storage react-native-fast-image
