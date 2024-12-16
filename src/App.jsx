@@ -317,23 +317,44 @@
 
 // };
 // export default App;
-import { getPost } from "./api/PostApi";
-import { useEffect } from "react";
+// import { getPost } from "./api/PostApi";
+// import { useEffect } from "react";
 
+
+// const App = () => {
+//  const getPostData = async ( ) => {
+//   const res = await getPost();
+//   console.log(res.data);
+
+// };
+// useEffect(() => {
+//   getPostData();
+// },[]);
+
+//   return <h1>Hello React Curd Oper.</h1>;
+// };
+// export default App;
+
+
+import { Posts} from "./Components/posts";
 
 const App = () => {
- const getPostData = async ( ) => {
-  const res = await getPost();
-  console.log(res.data);
-
+  return (
+    <section className="main-section">
+      <Posts />;
+    </section>
+  )
 };
-useEffect(() => {
-  getPostData();
-},[]);
 
-  return <h1>Hello React Curd Oper.</h1>;
-};
 export default App;
+ 
+
+
+
+
+
+
+
 
 
 

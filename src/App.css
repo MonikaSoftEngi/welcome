@@ -140,3 +140,25 @@ html {
   }
 } */
 
+body {
+  background-color: #17202a;
+}
+
+html {
+  font-size:62.5%;
+  font-family: "urbanist";
+}
+p,
+a,
+li,
+input {
+  font-size:1.6rem;
+  letter-spacing: 0.12rem;
+  line-height: 1.5;
+  color:#fff;
+}
+
+button {
+  padding:0.8rem 3.2rem;
+  border-radius: 0.3rem;
+}
