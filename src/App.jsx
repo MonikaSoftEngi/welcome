@@ -311,9 +311,30 @@
 
 
 
-import { Movie } from "./Pagess/Movie";
+// import { Movie } from "./Pagess/Movie";
+// const App = () => {
+//   return <h1>Movie </h1>
+
+// };
+// export default App;
+import { getPost } from "./api/PostApi";
+import { useEffect } from "react";
+
+
 const App = () => {
-  return <h1>Movie </h1>
+ const getPostData = async ( ) => {
+  const res = await getPost();
+  console.log(res.data);
 
 };
+useEffect(() => {
+  getPostData();
+},[]);
+
+  return <h1>Hello React Curd Oper.</h1>;
+};
 export default App;
+
+
+
+
