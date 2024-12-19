@@ -6,7 +6,7 @@ import { Form } from "./Foam";
 
 export const Posts = () => {
   const [data, setData] = useState([]);
-
+  const [UpdateDataApi,setUpdateDataApi] = useState({});
   const getPostData = async () => {
     const res = await getPost();
     console.log(res.data);
@@ -31,10 +31,20 @@ export const Posts = () => {
       console.log(error);
     }
   };
+
+// handleUpdatePost
+  const handleUpdatePost = (curElem) => setUpdateDataApi(curElem);
+
+  
   return (
     <>
       <section  className="section-form">
-        <Form data={data} setData={setData} />
+        <Form 
+        data={data}
+         setData={setData} 
+         UpdateDataApi={UpdateDataApi}
+        setUpdateDataApi={setUpdateDataApi }
+        />
       </section>
       <section className="section-post">
         <ol>
@@ -44,7 +54,7 @@ export const Posts = () => {
               <li key={id}>
                 <p>Title: {title}</p>
                 <p>Body: {body}</p>
-                <button>Edit</button>
+                <button onClick={()=> handleUpdatePost(id)}>Edit</button>
                 <button
                   className="btn-delete"
                   onClick={() => handleDeletePost(id)}
