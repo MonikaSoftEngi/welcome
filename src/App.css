@@ -159,6 +159,31 @@ input {
 }
 
 button {
+
   padding:0.8rem 3.2rem;
   border-radius: 0.3rem;
 }
+
+
+.section-form {
+  padding: 1.6rem;
+  background-color: #212f3d;
+  border-radius: 0.6rem;
+  -webkit-border-radius:0.6ram;
+  -moz-border-radius:0.6ram;
+  -ms-border-radius:0.6rem;
+  -o-border-radius:0.6ram;
+  margin:3.2rem auto;
+  
+  from {
+    display: flex;
+    gap:1.2rem;
+  }
+}
+
+
+
+
+
+
+
