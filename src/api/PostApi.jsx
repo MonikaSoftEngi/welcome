@@ -20,3 +20,9 @@ export const postData = (post) => {
 }
 
 
+
+//put method
+export const UpdateData = (id , Post) => {
+return api.put(`/Post/${id}`,Post);
+};
+
