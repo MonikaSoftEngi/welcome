@@ -96,6 +96,8 @@ if (res.status === 200) {
           onChange={handleInputChange}
         />
       </div>
+
+
       <button type="submit" value={isEmpty ? "Add" : "Edit"}>
         {isEmpty ? "Add" : "Edit"}
       </button>

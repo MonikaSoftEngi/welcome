@@ -336,18 +336,29 @@
 // export default App;
 
 
-import { Posts} from "./Components/posts";
+// import { Posts} from "./Components/posts";
 
-const App = () => {
-  return (
-    <section className="main-section">
-      <Posts />;
-    </section>
-  )
-};
+// const App = () => {
+//   return (
+//     <section className="main-section">
+//       <Posts />;
+//     </section>
+//   )
+// };
 
-export default App;
+// export default App;
  
+
+
+import {Accordion}  from "./Components/Accordion";
+import "./App.css";
+ const App  = ( ) => {
+
+    return < Accordion />;
+};
+export default App;
+
+
 
 
 
