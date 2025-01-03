@@ -5,7 +5,7 @@ export const FAQ = ({ curData,onToggle , isActive  }) => {
   
  
 
-  return (
+   return (
     <li>
       <div className="accordion-grid">
         <p>{question}</p>

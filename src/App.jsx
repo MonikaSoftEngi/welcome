@@ -354,9 +354,30 @@ import {Accordion}  from "./Components/Accordion";
 import "./App.css";
  const App  = ( ) => {
 
-    return < Accordion />;
+     return < Accordion />;
 };
 export default App;
+
+
+
+
+
+// const App = () =>  {
+//     return <h1>
+
+//     </h1>
+// };
+
+
+// export default App;
+
+
+
+
+
+
+
+
 
 
 

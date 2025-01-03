@@ -14,6 +14,7 @@ const handleButton = (id) => {
 setActiveId((prevId) =>(prevId ?  false : id ));
 };
 
+
   // console.log(data);=()
   return (
     <>
@@ -25,7 +26,7 @@ setActiveId((prevId) =>(prevId ?  false : id ));
             curData={curElem}
             isActive={activeId === curElem.id}
             onToggle={()  => handleButton(curElem.id)}
-            />
+/>
           );
         })}
       </ul>
