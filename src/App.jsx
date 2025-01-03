@@ -350,26 +350,30 @@
  
 
 
-import {Accordion}  from "./Components/Accordion";
-import "./App.css";
- const App  = ( ) => {
+// import {Accordion}  from "./Components/Accordion";
+// import "./App.css";
+//  const App  = ( ) => {
 
-     return < Accordion />;
-};
-export default App;
-
-
-
-
-
-// const App = () =>  {
-//     return <h1>
-
-//     </h1>
+//      return < Accordion />;
 // };
-
-
 // export default App;
+
+
+
+import {HeroSection} from "./Components/HeroSection";
+import { Navbar } from "./Components/Navbar";
+import "./App.css";
+const App = () =>  {
+    return (
+     <>
+     <Navbar />
+     <HeroSection App HeroSection/>
+     </>
+    );
+};
+
+
+export default App;
 
 
 
