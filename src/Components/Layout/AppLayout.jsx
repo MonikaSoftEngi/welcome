@@ -1,22 +1,42 @@
-import { Outlet ,useNavigation,} from "react-router-dom";
-import {Footer } from "./Footer";
-import { Header } from "./Header";
-import { Loading } from "./Loading";
+// import { Outlet ,useNavigation,} from "react-router-dom";
+// import {Footer } from "./Footer";
+// import { Header } from "./Header";
+// import { Loading } from "./Loading";
 
-const AppLayout = () => {
-const navigation = useNavigation();
-  console.log(navigation);
+import { Footer } from "../UI/Footers"
 
-  if (navigation.state ==="Loading") return <Loading />;
+// const AppLayout = () => {
+// const navigation = useNavigation();
+//   console.log(navigation);
 
-    return (
+//   if (navigation.state ==="Loading") return <Loading />;
 
-         <>
+//     return (
+
+//          <>
+//     <Header />
+//     <Outlet  />
+//    <Footer />
+//     </>
+//     );
+// };
+
+//  export default AppLayout;
+import { Outlet } from "react-router-dom";
+import { Header } from "../UI/Headers"; 
+// import { Footer } from "../UI/Footer";
+
+
+
+
+
+export const AppLayout = () =>
+{
+  return(
+    <>
     <Header />
-    <Outlet  />
-   <Footer />
-    </>
-    );
+    <Outlet />
+    <Footer />
+     </>
+  );
 };
-
- export default AppLayout;

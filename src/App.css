@@ -180,7 +180,7 @@ button {
     gap:1.2rem;
   }
 } */
-
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -241,7 +241,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   /* background-color: yellow; */
-  gap: 3.2rem;
+  /* gap: 3.2rem;
 }
 
 .ham-menu {
@@ -249,7 +249,7 @@ nav ul {
 }
 
 /* media queris */
-
+/* 
 @media screen and (max-width: 99px) {
   .menu-web {
     display: none;
@@ -258,7 +258,7 @@ nav ul {
   .hum-menu {
     display: inline-block;
     /* justify-content: flex-end; */
-    text-align: end;
+    /* text-align: end;
   }
 
   .menu-mobile {
@@ -274,7 +274,7 @@ nav ul {
     flex-direction: column;
     align-items: center;
   
-  & lli:first-child {
+  & li:first-child {
     margin-top: 1.2rem;
   }
   
@@ -282,5 +282,145 @@ nav ul {
  margin-bottom: 1.2rem;
   }
   
+  } */
+/* } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+--bg-color:#202020;
+}
+
+html {
+ font-size: 62.5%;
+ font-family: "urbanist"; 
+}
+
+body {
+  background-color: black;
+}
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+  color: #fff;
+}
+
+p,
+li,
+a,
+button {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+
+li {
+  list-style:none;
+
+}
+
+a {
+  color: #000;
+
+
+&:hover {
+  color: #2e86c1;
+}
+}
+button {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  padding: 0.6rem 2.4rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  text-transform:unset ;
+  transition:all 0.3s ease-in-out;
+  background: #202020;
+  color: #fff;
+  background-redius:1.5rem;
+  border-width: 0.1rem;
+  border-style:solid;
+
+}
+container {
+  max-width: 140rem;
+  margin: auto;
+}
+.grid {
+  display: grid;
+}
+
+
+.grid-two-cols {
+  grid-template-columns:repeat (2,1fr);
+}
+
+
+.grid-three-cols {
+grid-template-columns: repeat(3  , 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4  ,1fr);
+  }
+  
+
+
+header 
+{
+  height: 10rem;
+  box-shadow: rgba(33,35,38,0.1) 0px 10px 10px -10px;
+  background-color: #202020;
+  width: 100%;
+
+  &.container {
+    height: 10rem;
   }
 }
+
+.navbar-grid {
+grid-template-columns: 0 5fr 1fr;
+align-items: center;
+height: 10rem;
+padding: 0 3.2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10rem;
+}
+
+
+
+
+
+
+
+
