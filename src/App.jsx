@@ -359,47 +359,57 @@
 
 // export default App;
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "./App.css";
+// import "./App.css";
 
-import { AppLayout } from "./Components/Layout/AppLayout";
-import { Home } from "./Pages/Home";
-import { About } from "./Pages/About";
-import { Country } from "./Pages/Country";
-import { Contact } from "./Pages/Contact";
-import { ErrorPage } from "./Pages/ErrorPage";
-const router = createBrowserRouter([
-    {
-        path:"/",
-        element:<AppLayout/>,
-        errorElement:<ErrorPage  />,
-        children: [
-            {
-            path: "/",
-                element: <Home />,
-              },
+// import { AppLayout } from "./Components/Layout/AppLayout";
+// import { Home } from "./Pages/Home";
+// import { About } from "./Pages/About";
+// import { Country } from "./Pages/Country";
+// import { Contact } from "./Pages/Contact";
+// import { ErrorPage } from "./Pages/ErrorPage";
+// const router = createBrowserRouter([
+//     {
+//         path:"/",
+//         element:<AppLayout/>,
+//         errorElement:<ErrorPage  />,
+//         children: [
+//             {
+//             path: "/",
+//                 element: <Home />,
+//               },
             
-              {
-                path: "about",
-                element: <About />,
-              },
+//               {
+//                 path: "about",
+//                 element: <About />,
+//               },
             
-              {
-                path: "country",
-                element: <Country />,
-              },
+//               {
+//                 path: "country",
+//                 element: <Country />,
+//               },
             
-              {
-                path: "contact",
-                element: <Contact />,
+//               {
+//                 path: "contact",
+//                 element: <Contact />,
               
-        }]
-    }
+//         }]
+//     }
  
-]);
-const App = () => {
-  return <RouterProvider router={router}></RouterProvider>
-};
+// ]);
+// const App = () => {
+//   return <RouterProvider router={router}></RouterProvider>
+// };
 
+// export default App;
+
+
+
+
+const App =() => {
+    return <h1>
+        Hello Redux
+    </h1>;
+}
 export default App;

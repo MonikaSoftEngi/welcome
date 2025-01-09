@@ -1,3 +1,3 @@
 export const Footer= () => {
-    return <h1>Hello Footer</h1>;
+    return <h1>Hello Footers</h1>;
 };
