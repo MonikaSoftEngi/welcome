@@ -34,16 +34,24 @@ const taskReducer = (State = initialState, action) => {
 // create the redex store using te reducer
 const store = createStore(taskReducer);
 console.log();
-console.group("initial  State:",store.getstate());
+console.group("initial  State:",store.getState());
 
-store.dispatch({type:ADD_TASK,payload:"Buy ThapaTechnical Code"});
-console.log("updated State:",store.getstate());
+store.dispatch(addTask("Buy TT code"));
+console.log("updated State:",store.getState());
 
 
-store.dispatch({type:ADD_TASK,payload:"Buy Mango"});
-console.log("updated State:",store.getstate());
+store.dispatch(addTask("Buy Mango"));
+console.log("updated State:",store.getState());
 
 store.dispatch({type:DELETE_TASK,payload:1});
 console.log("delete State:",store.getState());
 
+
+const addTask =  (data) => {
+    return {type:ADD_TASK,payload:"data"};
+};
+
+const deleteTask = (id) => {
+    return{type:DELETE_TASK,payload:id};
+}
 
