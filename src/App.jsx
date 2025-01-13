@@ -407,9 +407,31 @@
 
 
 
-const App =() => {
-    return <h1>
-        Hello Redux
-    </h1>;
-}
+// const App =() => {
+//     return <h1>
+//         Hello Redux
+//     </h1>;
+// }
+// export default App;
+
+import {Todo} from "./Components/Todo";
+
+const App = () => {
+return <Todo />;
+
+
+};
+
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+

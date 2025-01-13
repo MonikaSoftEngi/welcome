@@ -53,5 +53,25 @@ const addTask =  (data) => {
 
 const deleteTask = (id) => {
     return{type:DELETE_TASK,payload:id};
-}
+};
+store.dispatch(addTask("Buy TT code"));
+store.dispatch(addTask("Buy apple"));
+store.dispatch(addTask("Buy banana"));
+console.log("updated State:", store.getState());
+
+
+store.dispatch(addTask("Buy Mango"));
+
+console.log("update State:", store.getState
+    
+)
+
+
+
+
+
+
+
+
+
 
