@@ -47,11 +47,11 @@ store.dispatch({type:DELETE_TASK,payload:1});
 console.log("delete State:",store.getState());
 
 
-const addTask =  (data) => {
+ export const addTask =  (data) => {
     return {type:ADD_TASK,payload:"data"};
 };
 
-const deleteTask = (id) => {
+  export const deleteTask = (id) => {
     return{type:DELETE_TASK,payload:id};
 };
 store.dispatch(addTask("Buy TT code"));
