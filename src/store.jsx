@@ -1,5 +1,5 @@
 import {createStore} from "redux";
-
+import {composeithDevTools} from "@redux-devtools/extension";
 
 
 const ADD_TASK ="task/add";
@@ -32,7 +32,8 @@ const taskReducer = (State = initialState, action) => {
 };
 
 // create the redex store using te reducer
-const store = createStore(taskReducer);
+
+const store = createStore(taskReducer,composeithDevTools());
 console.log();
 console.group("initial  State:",store.getState());
 
