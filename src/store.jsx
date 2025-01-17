@@ -1,12 +1,13 @@
-import {createStore} from "redux";
-import {composeithDevTools} from "@redux-devtools/extension";
-
+import {applyMiddleware,createStore} from "redux";
+import {composewithDevTools} from "@redux-devtools/extension";
+import { thunk } from "redux-thunk";
 
 const ADD_TASK ="task/add";
 const DELETE_TASK ="task/DELETE";
+const FETCH_TASKS="task/fetch";
+
 const initialState  = {
     task: [],
-    isLoaing:false,
 };
 const taskReducer = (State = initialState, action) => {
   switch (action.type) {
@@ -26,6 +27,12 @@ const taskReducer = (State = initialState, action) => {
 
             task: [...State.task,updatedTask],
         };
+
+        case FETCH_TASKS:
+            return {
+                ...State,
+                task: [...State.task,action.payload],
+            };
         default:
             return State;
   }
@@ -33,7 +40,8 @@ const taskReducer = (State = initialState, action) => {
 
 // create the redex store using te reducer
 
-const store = createStore(taskReducer,composeithDevTools());
+const store = createStore(taskReducer,composewithDevTools(applyMiddleware(thunk))
+);
 console.log();
 console.group("initial  State:",store.getState());
 
@@ -65,9 +73,23 @@ store.dispatch(addTask("Buy Mango"));
 
 console.log("update State:", store.getState
     
-)
+);
 
-
+export const fetchTask = () => {
+   return async (dispatch) => {
+try{
+ const res = await fetch(
+    "https://jsonplaceholder.typicode.com/todos?_limit=3"
+ );
+ const task = await res.json();
+ dispatch({type:FETCH_TASKS,payload:task.map((curTask) =>curTask.title ),
+    
+ });
+} catch (error) {
+    console.log(error);
+}
+   };
+};
 
 
 

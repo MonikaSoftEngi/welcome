@@ -379,33 +379,30 @@
 //             path: "/",
 //                 element: <Home />,
 //               },
-            
+
 //               {
 //                 path: "about",
 //                 element: <About />,
 //               },
-            
+
 //               {
 //                 path: "country",
 //                 element: <Country />,
 //               },
-            
+
 //               {
 //                 path: "contact",
 //                 element: <Contact />,
-              
+
 //         }]
 //     }
- 
+
 // ]);
 // const App = () => {
 //   return <RouterProvider router={router}></RouterProvider>
 // };
 
 // export default App;
-
-
-
 
 // const App =() => {
 //     return <h1>
@@ -414,24 +411,74 @@
 // }
 // export default App;
 
-import {Todo} from "./Components/Todo";
+
+
+import {useDispatch,useSelector} from "react-redux";
+import {addTask,deleteTask,fetchTask} from "./store"
+import { MdDeleteForever } from "react-icons/md";
+// import { Todo } from "./Components/Todo";
+import { useState } from "react";
 
 const App = () => {
-return <Todo />;
+
+    const [task,setTask]  = useState("");
+
+    const tasks = useSelector((state) => state.task);
+//   return <Todo />;
 
 
+  const dispatch = useDispatch();
+  console.log(tasks);
+
+
+  const  handleTaskDelete = (id) => {
+    dispatch(deleteTask(id));
+  };
+  const handleFetchTasks = () => {
+ dispatch(fetchTask())
+  };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (task.trim()) {
+      dispatch(addTask(task));
+      setTask("");
+    }
+  };
+
+  return (
+    <div className="container">
+      <div className="todo-app">
+        <h1>To-Do-List</h1>
+        <div className="row">
+          <form onSubmit={handleFormSubmit}>
+            <input
+              type="text"
+              id="input-box"
+              placeholder="Add a new task"
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+            />
+            <button onClickCapture={handleFetchTasks}>Fetch Tasks</button>
+            <ul id="list-container">
+              {tasks?.map((curTask, index) => (
+                <li key={index}>
+                  <p>
+                    {index}: {curTask}
+                  </p>
+                  <div>
+                    <MdDeleteForever
+                      className="icon-style"
+                      onClick={() => handleTaskDelete(index)}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
