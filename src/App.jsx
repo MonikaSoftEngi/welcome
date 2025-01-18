@@ -3,6 +3,8 @@
 //   return <h1>Hello, Thapa Technical.</h1>;
 // }
 
+import { useState } from "react";
+
 // console.log(React.createElement("h1", null, "Hello,Thapa Technical."));
 
 // export const App = () =>
@@ -411,74 +413,168 @@
 // }
 // export default App;
 
+// thunk
 
+// import { useDispatch, useSelector } from "react-redux";
+// import { addTask, deleteTask, fetchTask } from "./store";
+// import { MdDeleteForever } from "react-icons/md";
+// // import { Todo } from "./Components/Todo";
+// import { useState } from "react";
 
-import {useDispatch,useSelector} from "react-redux";
-import {addTask,deleteTask,fetchTask} from "./store"
-import { MdDeleteForever } from "react-icons/md";
-// import { Todo } from "./Components/Todo";
-import { useState } from "react";
+// const App = () => {
+//   const [task, setTask] = useState("");
+
+//   const tasks = useSelector((state) => state.task);
+//   //   return <Todo />;
+
+//   const dispatch = useDispatch();
+//   console.log(tasks);
+
+//   const handleTaskDelete = (id) => {
+//     dispatch(deleteTask(id));
+//   };
+//   const handleFetchTasks = () => {
+//     dispatch(fetchTask());
+//   };
+//   const handleFormSubmit = (e) => {
+//     e.preventDefault();
+//     if (task.trim()) {
+//       dispatch(addTask(task));
+//       setTask("");
+//     }
+//   };
+
+//   return (
+//     <div className="container">
+//       <div className="todo-app">
+//         <h1>To-Do-List</h1>
+//         <div className="row">
+//           <form onSubmit={handleFormSubmit}>
+//             <input
+//               type="text"
+//               id="input-box"
+//               placeholder="Add a new task"
+//               value={task}
+//               onChange={(e) => setTask(e.target.value)}
+//             />
+//             <button onClickCapture={handleFetchTasks}>Fetch Tasks</button>
+//             <ul id="list-container">
+//               {tasks?.map((curTask, index) => (
+//                 <li key={index}>
+//                   <p>
+//                     {index}: {curTask}
+//                   </p>
+//                   <div>
+//                     <MdDeleteForever
+//                       className="icon-style"
+//                       onClick={() => handleTaskDelete(index)}
+//                     />
+//                   </div>
+//                 </li>
+//               ))}
+//             </ul>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// import { useState } from "react";
 
 const App = () => {
+    const [amount, setAmount] = useState(0);
+    const [fromCurrency, setFromCurrency] = useState("USD");
+     const [toCurrency, setToCurrency] = useState("INR");
+     const [convertedAmount, setConvertedAmount] = useState(null);
 
-    const [task,setTask]  = useState("");
+    const [loading, setLoading] = useState(false);
+     const [error, setError] = useState(null);
 
-    const tasks = useSelector((state) => state.task);
-//   return <Todo />;
-
-
-  const dispatch = useDispatch();
-  console.log(tasks);
-
-
-  const  handleTaskDelete = (id) => {
-    dispatch(deleteTask(id));
-  };
-  const handleFetchTasks = () => {
- dispatch(fetchTask())
-  };
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    if (task.trim()) {
-      dispatch(addTask(task));
-      setTask("");
-    }
-  };
-
-  return (
-    <div className="container">
-      <div className="todo-app">
-        <h1>To-Do-List</h1>
-        <div className="row">
-          <form onSubmit={handleFormSubmit}>
+      const handleConvertCurrency = () => {
+     setLoading(true);
+     setError(null);
+    //  try {
+    //   const res =  await CurrencyConverter(fromCurrency, toCurrency, amount);
+    //   const {conversion_result} =   await res.data;
+    //   setLoading(false);
+    //   setConvertedAmount(conversion_result);
+      
+    //  } catch (error) {
+    //   setError("Error fetching conversion rate");
+    //   console.error(error);
+    //  }
+     };
+     return (
+     <section className="currency-converter">
+      <div classname="currency-div">
+        <h1>currancyConverter</h1>
+        <div>
+          <label htmlFor="currency_amount">
+            Amount:
             <input
-              type="text"
-              id="input-box"
-              placeholder="Add a new task"
-              value={task}
-              onChange={(e) => setTask(e.target.value)}
+              type="number"
+              id="currency_amount"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
             />
-            <button onClickCapture={handleFetchTasks}>Fetch Tasks</button>
-            <ul id="list-container">
-              {tasks?.map((curTask, index) => (
-                <li key={index}>
-                  <p>
-                    {index}: {curTask}
-                  </p>
-                  <div>
-                    <MdDeleteForever
-                      className="icon-style"
-                      onClick={() => handleTaskDelete(index)}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </form>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            from:
+            <select
+              value={fromCurrency}
+              onChange={(e) => setFromCurrency(e.target.value)}
+            >
+              <option value="USD"> USD</option>
+              <option value="EUR"> EUR</option>
+              <option value="INR"> INR</option>
+              <option value="GBP"> GBP</option>
+              <option value="AUD"> AUD</option>
+            </select>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            To:
+            <select
+              value={toCurrency}
+              onChange={(e) => setToCurrency(e.target.value)}
+            >
+              <option value="INR"> INR</option>
+              <option value="USD"> USD</option>
+              <option value="EUR"> EUR</option>
+              <option value="GBP"> GBP</option>
+              <option value="AUD"> AUD</option>
+            </select>
+          </label>
         </div>
       </div>
-    </div>
+
+      <button
+       disabled={loading || amount + 0} 
+       onClick={handleConvertCurrency}
+      >
+        {loading ? "converting.." : "convert"}
+      </button>
+   
+      <hr />
+      {convertedAmount && (
+        <div>
+          <h2>
+            {amount} {fromCurrency} = {convertedAmount.toFixed(2)}
+            {toCurrency}
+          </h2>
+          </div>
+      )}
+      {error && <p>{error}</p>}
+      {/* </div> */}
+    </section>
   );
 };
-
 export default App;
