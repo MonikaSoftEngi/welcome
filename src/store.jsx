@@ -1,6 +1,7 @@
-import { applyMiddleware, createStore } from "redux";
-import { composewithDevTools } from "@redux-devtools/extension";
-import { thunk } from "redux-thunk";
+// import { applyMiddleware, createStore } from "redux";
+// import { composewithDevTools } from "@redux-devtools/extension";
+// import { thunk } from "redux-thunk";
+import { configureStore } from "@reduxjs/toolkit";
 
 const ADD_TASK = "task/add";
 const DELETE_TASK = "task/DELETE";
@@ -38,11 +39,23 @@ const taskReducer = (State = initialState, action) => {
 
 // create the redex store using te reducer
 
-const store = createStore(
-  taskReducer,
-  composewithDevTools(applyMiddleware(thunk))
-);
-console.log();
+// const store = createStore(
+//   taskReducer,
+//   composewithDevTools(applyMiddleware(thunk))
+// );
+// console.log();
+
+
+ export const store = configureStore({
+  reducer:{
+    taskReducer,
+  },
+});
+
+
+
+
+
 console.group("initial  State:", store.getState());
 
 store.dispatch(addTask("Buy TT code"));
