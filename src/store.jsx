@@ -115,16 +115,28 @@ const initialState = {
   name:"task",
   initialState,
   reducers:{
- addTask(state,action) {},
- deleteTask(state,action) {},
+ addTask(state,action) {
+state.task.push(action.payload);
+ },
+ deleteTask(state,action) {
+state.task = state.task.filter (
+  (curTask, index) => index === action.payload
+);
+ },
   },
  });
  console.log(taskReducer);
  
+ const {addTask,deleteTask} = taskReducer.actions;
  // new style
  export const store = ConfigureStore({
    reducer: {
-     taskReducer,
+     taskReducer:taskReducer.reducer,
    },
  });
- 
+ console.log(store.getState());
+
+ console.log(store.dispatch(addTask("Buy Mango"))); 
+ console.log(store.getState());
+ console.log(store.dispatch(addTask("Buy Apple")));
+ console.log(store.getState());
