@@ -198,8 +198,38 @@ Pokemon-info {
 } */
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"urbanist";
+  letter-spacing:0-1;
+}
 
+html{
+font-family:62.5%
+}
+ body {
+  background-color: #1c2833;
+  background-image:linear-gradient(to right, #434343 0%, black 100%) ;
+  color: #fdfefe;
+ }
 
+.currency-converter {
+  display:flex;
+  justify-content: center;
+  height: 100vh;
 
+}
 
-
+.currrency-div {
+  padding: 3.2rem;
+}
+.currrency-div {
+  padding: 3.2rem;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #66f1f5 100% );
+  color: #1c2833;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
