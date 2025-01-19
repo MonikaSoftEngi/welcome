@@ -589,91 +589,103 @@ import { useState } from "react";
 
 
 // cureency converter******************
-  // import { useState } from "react";
-  import {useQuery} from "@tanstack/react-query";
-  import {CurrencyConverter} from "./api/PostApi";
-const App = ()  => {
-  const [amount, setAmount] = useState(0);
-  const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency,setToCurrency] = useState("INR");
+  
+//   import {useQuery} from "@tanstack/react-query";
+//   import {CurrencyConverter} from "./api/PostApi";
+// const App = ()  => {
+//   const [amount, setAmount] = useState(0);
+//   const [fromCurrency, setFromCurrency] = useState("USD");
+//   const [toCurrency,setToCurrency] = useState("INR");
 
-   const {data :ConvertedAmount
-    ,isloading,error,
-  refetch,
-} = useQuery({
-    querykey:['currency'],
-    queryFn:() => CurrencyConverter(fromCurrency, toCurrency,
-      amount),
-      enabled:false
-  });
-  const handleCurrencyConverter = () => {
-if (amount > 0) {
-  refetch();
-}
+//    const {data :ConvertedAmount
+//     ,isloading,error,
+//   refetch,
+// } = useQuery({
+//     querykey:['currency'],
+//     queryFn:() => CurrencyConverter(fromCurrency, toCurrency,
+//       amount),
+//       enabled:false
+//   });
+//   const handleCurrencyConverter = () => {
+// if (amount > 0) {
+//   refetch();
+// }
 
     
-  };
-return (
-<section className="currency-converter">
-<div className="currency-converter">
-  <h>Hello currency</h>
-  <hr />
-<div> 
-  <label>
-    Amount:
-    <input type="text" value={amount}
-    onChange={(e)=> setAmount(e.target.value)} />
-  </label>
-</div>
-<section className="currency-selectour">
-<label>
-  from:
-  <select value= {fromCurrency}
-  onChange={(e) => setFromCurrency(e.target.value)}
-  >
-    {[  "INR", "USD" , "EUR" , "GBP", "AUD"].map((currency)=> {
-      return (
-        <option  key={currency}  value= {currency}>
-        </option>
-      );
-    })}
-  </select>
-</label>
+//   };
+// return (
+// <section className="currency-converter">
+// <div className="currency-converter">
+//   <h>Hello currency</h>
+//   <hr />
+// <div> 
+//   <label>
+//     Amount:
+//     <input type="text" value={amount}
+//     onChange={(e)=> setAmount(e.target.value)} />
+//   </label>
+// </div>
+// <section className="currency-selectour">
+// <label>
+//   from:
+//   <select value= {fromCurrency}
+//   onChange={(e) => setFromCurrency(e.target.value)}
+//   >
+//     {[  "INR", "USD" , "EUR" , "GBP", "AUD"].map((currency)=> {
+//       return (
+//         <option  key={currency}  value= {currency}>
+//         </option>
+//       );
+//     })}
+//   </select>
+// </label>
 
-<label>
-from:
-  <select value= {toCurrency}
-  onChange={(e) => setFromCurrency(e.target.value)}
-  >
-    {[  "INR", "USD" , "EUR" , "GBP", "AUD"].map((currency)=> {
-      return (
-        <option  key={currency}  value= {currency}>
-        </option>
-      );
-    })}
-  </select>
-</label>
-</section>
-<button disabled= {isloading || amount <= 0}
-onClick={handleCurrencyConverter}
-> 
-  {isloading ? "converting.." :"convert" }
-  </button>
+// <label>
+// from:
+//   <select value= {toCurrency}
+//   onChange={(e) => setFromCurrency(e.target.value)}
+//   >
+//     {[  "INR", "USD" , "EUR" , "GBP", "AUD"].map((currency)=> {
+//       return (
+//         <option  key={currency}  value= {currency}>
+//         </option>
+//       );
+//     })}
+//   </select>
+// </label>
+// </section>
+// <button disabled= {isloading || amount <= 0}
+// onClick={handleCurrencyConverter}
+// > 
+//   {isloading ? "converting.." :"convert" }
+//   </button>
 
-  <hr />
-  {
-    ConvertedAmount && (
-      <h2>
-        {amount} {fromCurrency}  = {ConvertedAmount.toFixed(2)}{toCurrency}
-      </h2>
-    )
-  }
-  {error && <p>An occurred: {error.message}</p>}
-</div>
-</section>
+//   <hr />
+//   {
+//     ConvertedAmount && (
+//       <h2>
+//         {amount} {fromCurrency}  = {ConvertedAmount.toFixed(2)}{toCurrency}
+//       </h2>
+//     )
+//   }
+//   {error && <p>An occurred: {error.message}</p>}
+// </div>
+// </section>
 
 
-);
-};
+// );
+// };
 
-export default App;
+// export default App;
+
+
+
+// RTK Slice************
+
+
+
+
+
+
+
+
