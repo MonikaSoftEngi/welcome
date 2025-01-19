@@ -683,7 +683,26 @@ import { useState } from "react";
 // RTK Slice************
 
 
+const App = () =>  {
+    return (
+        <div className="container">
+            <div className="todo-list">
+                <h1>
+                    to-do List:
+                </h1>
+                <div className="row">
+            <from>
+                <input type="text" id="input-box" placeholder="Add a new task" />
+                <button type="submit"> Add Task</button>
+            </from>
+                </div>
+                <ul id ="List-container"> </ul>
+            </div>
+        </div>
+        
 
+    );
+};
 
 
 
