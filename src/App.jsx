@@ -685,9 +685,10 @@ import { useDispatch, useSelector } from "react-redux";
 // RTK Slice************
 import { MdDeleteForever } from "react-icons/md";
 import { useDispatch,useSelector } from "react-redux";
-import { addTask, deleteTask } from "./store";
-import { useState } from "react";
+import { addTask, deleteTask } from "./features/tasks";
 
+import { useState } from "react";
+ 
 const App = () =>  {
     const [userTask,setUserTask] = useState("");
     const tasks = (useSelector((state) => state.taskReducer.task));

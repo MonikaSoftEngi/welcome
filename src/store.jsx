@@ -105,41 +105,15 @@
 
 
 // RTK slice*******
-import {ConfigureStore, createSlice} from " @reduxjs/toolkit";
-const initialState = {
-  task: [],
- };
- 
- //?RTK slice
-   const taskReducer =  createSlice({
-  name:"task",
-  initialState,
-  reducers:{
- addTask(state,action)  {
-state.task.push(action.payload);
- },
- deleteTask(state,action) {
-state.task = state.task.filter (
-  (curTask, index) => index === action.payload
-);
- },
-  },
- });
- console.log(taskReducer);
- 
- export const {addTask,deleteTask} = taskReducer.actions;
- // new style
+import {ConfigureStore } from " @reduxjs/toolkit";
+import taskReducer  from "./features/tasks/taskSlice";
+// import { taskReducer } from "./features/tasks/taskSlice";
+
+
+// new style
  export const store = ConfigureStore({
    reducer: {
-     taskReducer:taskReducer.reducer,
+     taskReducer,
    },
  });
- console.log(store.getState());
-
-  console.log(store.dispatch(addTask("Buy Mango"))); 
- console.log(store.getState());
- console.log(store.dispatch(addTask("Buy Grapes")));
- console.log(store.dispatch(deleteTask(1)));
- console.log(store.getState());
- console.log(store.dispatch(addTask("Buy Apple")));
- console.log(store.getState());
+ 
