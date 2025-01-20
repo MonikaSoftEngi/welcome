@@ -708,7 +708,7 @@ const App = () =>  {
                             </p>
                             <div>
                                 <MdDeleteForever
-                                className="icon-style"
+                                 className="icon-style"
                                  />
                             </div>
                         </li>

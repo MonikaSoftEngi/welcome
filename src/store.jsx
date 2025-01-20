@@ -136,7 +136,7 @@ state.task = state.task.filter (
  });
  console.log(store.getState());
 
- console.log(store.dispatch(addTask("Buy Mango"))); 
+  console.log(store.dispatch(addTask("Buy Mango"))); 
  console.log(store.getState());
  console.log(store.dispatch(addTask("Buy Grepes")));
  console.log(store.dispatch(addTask("Buy Apple")));
