@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // console.log(React.createElement("h1", null, "Hello,Thapa Technical."));
 
@@ -684,9 +684,24 @@ import { useSelector } from "react-redux";
 
 // RTK Slice************
 import { MdDeleteForever } from "react-icons/md";
-import { useSelector } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
+import { addTask, deleteTask } from "./store";
+import { useState } from "react";
+
 const App = () =>  {
+    const [userTask,setUserTask] = useState("");
     const tasks = (useSelector((state) => state.taskReducer.task));
+  const dispatch = useDispatch();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addTask(userTask))
+    setUserTask("");
+  };
+
+  const handleDelete = (index) => {
+    dispatch(deleteTask(index));
+  };
     return (
         <div className="container">
             <div className="todo-list">
@@ -694,8 +709,11 @@ const App = () =>  {
                     to-do List:
                 </h1>
                 <div className="row">
-            <from>
-                <input type="text" id="input-box" placeholder="Add a new task" />
+            <from onSubmit={handleFormSubmit}>
+                <input type="text" id="input-box" placeholder="Add a new task" 
+                value={userTask}
+                onChange={(e) => setUserTask(e.target.value)}
+                />
                 <button type="submit"> Add Task</button>
             </from>
                 </div>
@@ -708,7 +726,8 @@ const App = () =>  {
                             </p>
                             <div>
                                 <MdDeleteForever
-                                 className="icon-style"
+                                 className="icon-style" 
+                                 onClick={() =>handleDelete(index)}
                                  />
                             </div>
                         </li>

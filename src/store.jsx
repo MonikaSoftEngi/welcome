@@ -115,7 +115,7 @@ const initialState = {
   name:"task",
   initialState,
   reducers:{
- addTask(state,action) {
+ addTask(state,action)  {
 state.task.push(action.payload);
  },
  deleteTask(state,action) {
@@ -127,7 +127,7 @@ state.task = state.task.filter (
  });
  console.log(taskReducer);
  
- const {addTask,deleteTask} = taskReducer.actions;
+ export const {addTask,deleteTask} = taskReducer.actions;
  // new style
  export const store = ConfigureStore({
    reducer: {
@@ -138,6 +138,8 @@ state.task = state.task.filter (
 
   console.log(store.dispatch(addTask("Buy Mango"))); 
  console.log(store.getState());
- console.log(store.dispatch(addTask("Buy Grepes")));
+ console.log(store.dispatch(addTask("Buy Grapes")));
+ console.log(store.dispatch(deleteTask(1)));
+ console.log(store.getState());
  console.log(store.dispatch(addTask("Buy Apple")));
  console.log(store.getState());
