@@ -4,6 +4,8 @@
 // }
 
 import { useState } from "react";
+import { MdDeleteForever } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 // console.log(React.createElement("h1", null, "Hello,Thapa Technical."));
 
@@ -681,9 +683,10 @@ import { useState } from "react";
 
 
 // RTK Slice************
-
-
+import { MdDeleteForever } from "react-icons/md";
+import { useSelector } from "react-redux";
 const App = () =>  {
+    const tasks = (useSelector((state) => state.taskReducer.task));
     return (
         <div className="container">
             <div className="todo-list">
@@ -696,7 +699,22 @@ const App = () =>  {
                 <button type="submit"> Add Task</button>
             </from>
                 </div>
-                <ul id ="List-container"> </ul>
+                <ul id ="List-container"> 
+                    {tasks ?.map((curTask, index) =>{
+                        return(
+                        <li key = {index}>
+                            <p>
+                                {index} : {curTask}
+                            </p>
+                            <div>
+                                <MdDeleteForever
+                                className="icon-style"
+                                 />
+                            </div>
+                        </li>
+                        );
+                    })}
+                </ul>
             </div>
         </div>
         
