@@ -704,7 +704,7 @@ const App = () =>  {
                         return(
                         <li key = {index}>
                             <p>
-                                {index} : {curTask}
+                                {index} :  {curTask}
                             </p>
                             <div>
                                 <MdDeleteForever
